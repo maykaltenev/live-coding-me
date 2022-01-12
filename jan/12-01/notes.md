@@ -13,12 +13,21 @@ They are not displayed on the website. Way of communication between developers.
 <a href="#free"></a>
 
 <h1 id="id">Free ID</h1>
+
 Hashtag always connected with id
 ---old table
+
 <table>
 <tr>  
 <th>TABLE HEAD</th>
 <tr>
 <td>TABLE DATA</td>
-
+<br>
 -- Live is an application, that service computer purpose
+-- Navigation
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+</ul>
+</nav>
