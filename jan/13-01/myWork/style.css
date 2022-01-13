@@ -1,0 +1,22 @@
+p {
+  background-color: blueviolet;
+}
+div p {
+  background-color: red;
+}
+ul li {
+  background-color: orangered;
+}
+/* Menu */
+nav ul li {
+  background-color: gray;
+}
+strong {
+  background-color: sienna;
+}
+.dark {
+  background-color: black;
+}
+.light {
+  background-color: whitesmoke;
+}
