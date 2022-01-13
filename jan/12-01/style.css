@@ -1,5 +1,11 @@
 nav {
   background-color: black;
+  text-align: center;
+}
+nav ul li {
+  text-align: left;
+  display: inline;
+  margin-right: 3rem;
 }
 nav ul li {
   display: inline;
