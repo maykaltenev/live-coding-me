@@ -1,0 +1,50 @@
+body {
+  background-color: #c180f0;
+}
+h1,
+h2,
+h3,
+.dark,
+nav ul li a {
+  color: blue;
+}
+/* menu */
+header nav {
+  background-color: rgba(0, 0, 0, 0, 766);
+}
+nav {
+  height: 3rem;
+  display: inline;
+  margin-left: 3rem;
+}
+h1 {
+  /* option one */
+  color: red;
+  /* option two */
+  color: #ff0000;
+  /* option three */
+  color: hsl(0, 100%, 48%);
+  /* option four */
+  background-color: rgba(3, 3, 255, 0.55);
+
+  font-family: "Indie Flower", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+}
+/* DRY
+Don't repeat yourself */
+section div {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+#red {
+  background-color: red;
+}
+#orange {
+  background-color: orange;
+}
+#green {
+  background-color: green;
+}
