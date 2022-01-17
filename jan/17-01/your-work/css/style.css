@@ -1,6 +1,24 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: #c180f0;
+  background-image: url("../images/anime-sky.gif");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 80rem;
 }
+/* Box Model -- Interview Q */
+/* the control over content is clockwise */
+/* margin-top, margin-right, margin-bottom, margin-left  -- outside */
+/* border-top,border-right, border-bottom, border-left -- border*/
+/* padding-top, padding-right, padding-bottom, padding-left - space between border and content */
+/* content area   | height
+    width ----    |*/
+/* box-sizing:border-box -- If i want to make border-box with size 3 it will be within the size of 3*/
+/* without border-box and if we set a size 3, there will be added extra 1 for the border. */
 h1,
 h2,
 h3,
@@ -47,4 +65,12 @@ section div {
 }
 #green {
   background-color: green;
+}
+
+/* About main */
+
+main img {
+  width: 150px;
+  height: 150px;
+  border-top: 40px black solid;
 }
