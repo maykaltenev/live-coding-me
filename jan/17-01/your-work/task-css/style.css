@@ -3,19 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-section {
-  text-align: center;
+.shapes div {
+  width: 9rem;
+  height: 9rem;
+  display: inline-block;
+  border: 2px black solid;
+  margin-left: 3rem;
 }
 #rectangle {
   height: 200px;
   width: 100px;
-  background-color: blue;
+  background-color: lightblue;
 }
+
 #triangle {
   height: 0px;
   width: 0px;
-  border-top: 150px solid white;
-  border-left: 150px solid transparent;
+  border-top: 175px solid white;
+  border-left: 175px solid transparent;
   background-color: purple;
 }
 #square {

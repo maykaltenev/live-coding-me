@@ -3,6 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+.something {
+  width: 10rem;
+  height: 20rem;
+  background-color: deepskyblue;
+  margin: 20rem 5rem 5rem 2rem;
+  border: 2px red solid;
+  border-width: 10px 22px 30px 10px;
+  border-color: red orange blue gray;
+  border-style: dashed solid solid dashed;
+}
 body {
   background-color: #c180f0;
   background-image: url("../images/anime-sky.gif");
@@ -73,4 +83,13 @@ main img {
   width: 150px;
   height: 150px;
   border-top: 40px black solid;
+}
+
+h1 {
+  color: black;
+  word-spacing: 50px;
+  text-indent: 100px;
+}
+p {
+  line-height: 40px;
 }
