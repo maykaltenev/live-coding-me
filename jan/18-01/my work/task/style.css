@@ -17,11 +17,15 @@ td {
 } */
 
 /* without class */
+
+table {
+  border-spacing: 0;
+  border: 2px solid black;
+}
 table tr td {
+  box-sizing: border-box;
   width: 75px;
   height: 75px;
-  border-spacing: 0;
-  border: 1px solid black;
 }
 
 table tr:nth-child(odd) td:nth-child(even) {
