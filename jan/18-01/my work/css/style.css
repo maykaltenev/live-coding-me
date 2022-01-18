@@ -79,3 +79,29 @@ th {
   width: 1rem;
   border-spacing: 33px;
 }
+
+/* About page */
+
+/* .box {
+  border: 3px black solid;
+  width: 5rem;
+  height: 5rem;
+  background-color: orange;
+  display: inline-block;
+}
+/* no parent  */
+/* .one {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-color: gray;
+} */
+.box {
+  border: 3px black solid;
+  width: 5rem;
+  height: 5rem;
+  background-color: orange;
+}
+.one {
+  position: absolute;
+}
