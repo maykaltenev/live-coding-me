@@ -35,15 +35,15 @@ html {
   backdrop-filter: gray;
 }
 /* element,element Selector
-    element AND element 
-    */
+      element AND element 
+      */
 p,
 span {
   background-color: yellow;
 }
 /* element element Selector
-    aka element inside element 
-    */
+      aka element inside element 
+      */
 p i {
   font-size: 3rem;
 }
@@ -52,19 +52,19 @@ header li {
   color: wheat;
 }
 /* element>element	 Selector  
-    element parent element 
-    */
+      element parent element 
+      */
 div > p {
   background-color: aqua;
 }
 /* element+element  Selector
-    element immediately after element */
+      element immediately after element */
 div + p {
   background-color: blue;
 }
 
 /* element1~element2 Selector 
-    element preceded element */
+      element preceded element */
 p ~ span {
   font-size: 10rem;
   background-color: darkcyan;
@@ -74,18 +74,40 @@ p ~ span {
   background-color: brown;
 }
 /* [attribute=value] Selector  */
-[type="submit"]
+[type="submit"] {
+  border: none;
+  background-color: black;
+  color: aliceblue;
+}
 /* [attribute~=value] Selector
-    containing the value */
+      containing the value */
+[img~="tree"] {
+  width: 12rem;
+}
+form {
+  border: 2px red dashed;
+}
+[class*="long"] {
+  border: 2px black dashed;
+}
 
 /* [attribute^=value] Selector
-    begins with the value */
+      begins with the value */
+[title^="Here"] {
+  border: 2px red dashed;
+}
 
 /* [attribute$=value] Selector
-    value ends with  */
+      value ends with  */
+[title^="data"] {
+  border: 2px red black;
+}
 
 /* [attribute*=value] Selector
-    contains the substring */
+      contains the substring */
+[title*="long"] {
+  border: 5px black solid;
+}
 
 /* pseudo class  */
 /* specifies a special state for that element */
