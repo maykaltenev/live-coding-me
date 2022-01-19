@@ -112,13 +112,37 @@ form {
 /* pseudo class  */
 /* specifies a special state for that element */
 /* :hover */
+table:hover {
+  background-color: grey;
+}
 
 /* :visited */
-
+a,
+a:visited,
+a:link {
+  color: green;
+}
+/* input[type="text"] {
+} */
 /* :focus */
+input[type="text"]:focus {
+  outline: none;
+  border: 2px green solid;
+}
 
 /* :active */
+a:active {
+  background-color: red;
+}
 
 /* :checked */
-
+[type="checkbox"]:checked {
+  width: 3rem;
+}
 /* :nth-child() */
+/* tr:nth-child(3) {
+  background-color: black;
+} */
+tr:nth-child(2n + 3) {
+  background-color: black;
+}
