@@ -69,8 +69,15 @@ p ~ span {
   background-color: darkcyan;
 }
 /* [attribute] Selector */
-
+[id] {
+  background-color: brown;
+}
 /* [attribute=value] Selector  */
+[type="submit"] {
+  border: none;
+  background-color: black;
+  color: aliceblue;
+}
 
 /* [attribute~=value] Selector
     containing the value */
