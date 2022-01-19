@@ -17,7 +17,6 @@ td {
 } */
 
 /* without class */
-
 table {
   border-spacing: 0;
   border: 2px solid black;
@@ -29,8 +28,8 @@ table tr td {
 }
 
 table tr:nth-child(odd) td:nth-child(even) {
-  background: black;
+  background: white;
 }
 table tr:nth-child(even) td:nth-child(odd) {
-  background: black;
+  background: white;
 }

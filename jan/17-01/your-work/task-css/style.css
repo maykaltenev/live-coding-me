@@ -14,20 +14,18 @@
 #rectangle {
   height: 12rem;
   width: 5rem;
-  background-color: lightblue;
+  border-bottom: 300px transparent solid;
+  border-right: 300px transparent solid;
+  border-left: 600 black solid;
 }
 
-#triangle {
-  height: 0;
+/* #triangle {
   width: 0;
-  border-top: 150px solid white;
-  border-left: 150px solid transparent;
-  border-right: none;
-  border-bottom-style: 2px solid black;
-  border-left-style: 2px solid black;
-  background-color: purple;
-  position: relative;
-}
+  height: 0;
+  border-bottom: 300px transparent solid;
+  border-top: 300px transparent;
+} */
+
 /* clip-path: polygon(0 45%, 0% 100%, 100% 100%); */
 /* #rotated {
   width: 15em;
@@ -37,20 +35,10 @@
   transform: translateX(22.9rem) rotate(31.7deg);
   bottom: -5.4rem;
   right: 7rem;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-#black {
-  height: 0;
-  width: 0;
-  position: absolute;
-  background-color: transparent;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
+} */
 
-  /* clip-path: polygon(0 45%, 100% 45%, 100% 100%); */
-* #square {
+/* clip-path: polygon(0 45%, 100% 45%, 100% 100%); */
+#square {
   background-color: green;
 }
 #circle {
