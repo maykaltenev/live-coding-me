@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* variables */
+  --my-color: purple;
+  --my-font-size: 3rem;
+  --other-color: rgba(222, 34, 5, 0.79);
+  --header-font-family: "Lucida Sans", Geneva, sans-serif;
+  --box-width: 3rem;
+  --img-height: 44rem;
+  --footer-font-family: ;
+}
+body {
+  color: var(--my-color);
+}
+h1 {
+  border: 2px var(--my-color) solid;
+  font-family: var(--header-font-family);
+}
+/* pseudo elements VS  pseudo classes */
+
+/* pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). */
+/* more pseudo classes
+    :valid
+    :hover */
+
+/* pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s) */
+
+/* ::before  Vs :before */
+/*   
+      :before css2 and ::before is css3
+    */
+
+/* ::placeholder  */
+
+/* ::first-letter (:first-letter) */
+
+/* display:none vs opacity: 0 */
+
+/* vh & vw */
+
+/* visual content like img */
+/*  % , border-radius */
