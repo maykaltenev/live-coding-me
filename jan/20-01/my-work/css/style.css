@@ -50,12 +50,21 @@ input[type="password"]::placeholder {
 p::first-letter {
   color: var(--other-color);
   /* font-size: 4rem; */
-  font-size: var(--my-font-size);
+  font-size: var(var(--my-font-size) - 1rem);
 }
 
 /* display:none vs opacity: 0 */
 
 /* vh & vw */
+
+.car {
+  /* view port width */
+  width: 50vw;
+  /* view port height */
+  height: 50vh;
+  filter: grayscale(75);
+  opacity: 1;
+}
 
 /* visual content like img */
 /*  % , border-radius */
