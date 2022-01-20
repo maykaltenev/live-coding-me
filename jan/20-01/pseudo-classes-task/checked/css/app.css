@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 100;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  /* variables */
+  --my-color: green;
+  --my-font-size: 4rem;
+  --other-color: #d5edf2;
+  --border: 2rem solid;
+}
+input:default {
+  box-shadow: 0 0 2px 1px coral;
+}
+input:default + label {
+  color: coral;
+}
+
+/* :checked {
+  margin-left: 25px;
+  border: 2rem;
+} */
+
+/* :checked {
+  margin-left: 25px;
+  border: 2rem solid green;
+} */
+/* div,
+select {
+  margin: 8px;
+} */
+/* Labels for checked inputs */
+/* input:checked + label {
+  color: red;
+} */
+
+/* Radio element, when checked */
+
+/* input[type="radio"]:checked {
+  box-shadow: 0 0 0 3px orange;
+} */
+
+/* Checkbox element, when checked */
+/* input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
+} */
+
+/* Option elements, when selected */
+/* option:checked {
+  box-shadow: 0 0 0 3px lime;
+  color: red;
+} */
