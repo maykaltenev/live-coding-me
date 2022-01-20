@@ -33,10 +33,25 @@ h1 {
 /*   
       :before css2 and ::before is css3
     */
+h1::after {
+  content: "😎";
+}
+h1::before {
+  content: "🎉";
+}
 
 /* ::placeholder  */
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--my-color);
+}
 
 /* ::first-letter (:first-letter) */
+p::first-letter {
+  color: var(--other-color);
+  /* font-size: 4rem; */
+  font-size: var(--my-font-size);
+}
 
 /* display:none vs opacity: 0 */
 
