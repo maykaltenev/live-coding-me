@@ -6,11 +6,18 @@
 :root {
   font-size: 16px;
 }
-:checked + label {
+/* :checked + label {
   color: red;
+  border: 5px solid red;
+ 
+} */
+
+[type="radio"] {
+  width: 25px;
+  height: 25px;
 }
-input[type="checkbox"]:checked {
-  box-shadow: 0 0 0 3px orange;
+input[type="radio"]:checked {
+  box-shadow: 10 5 5 15px orange;
 }
 
 input:default {

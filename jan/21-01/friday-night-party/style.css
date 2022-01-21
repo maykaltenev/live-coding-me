@@ -1,0 +1,27 @@
+#member + ul {
+  border: 1px solid red;
+  border-radius: 0.5rem;
+  list-style-type: none;
+  margin: 20px 10px;
+  padding: 15px;
+}
+#member + ul > li {
+  text-align: center;
+  border: 1px dashed black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#member + ul > li:nth-child(2n - 1) {
+  background-color: lightblue;
+}
+#member + ul > li:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid black;
+}
+#member + ul > li:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid black;
+}
