@@ -1,0 +1,31 @@
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Raleway:wght@800&display=swap");
+@import url(./color.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Akaya Telivigala", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+/* form */
+
+/* fancy checkbox */
+
+/* Hide the ugly html checkbox */
+
+/* The switch */
+
+/* font-awesome */
+i {
+  font-size: 3rem;
+  color: var(--orange-is-my-fav);
+
+  /* box-shadow: 0 4px 4px 4px yellowgreen; */
+}
