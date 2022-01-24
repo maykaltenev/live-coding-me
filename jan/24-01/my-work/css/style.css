@@ -1,7 +1,7 @@
 /* fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&family=Raleway:wght@800&display=swap");
-@import url(./color.css);
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+@import url("./color.css");
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ body {
     sans-serif;
   width: 100vw;
   height: 100vh;
+  transition: 0.2s;
 }
 /* form */
 form {
@@ -58,8 +59,8 @@ select:focus {
 .switch {
   position: relative;
   width: 4rem;
-  height: 4rem;
-  border: 2px red dashed;
+  height: 2rem;
+  /* border: 2px red dashed; */
   margin-left: 2rem;
 }
 .slider {
@@ -68,11 +69,21 @@ select:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  border: 2px yellowgreen dashed;
+  /* border: 2px yellowgreen dashed; */
   cursor: pointer;
   background-color: #ccc;
   border-radius: 5rem;
   transition: 0.2s;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  left: 0.2rem;
+  bottom: 0.45rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
 }
 /* font-awesome */
 i {
@@ -80,4 +91,14 @@ i {
   color: var(--orange-is-my-fav);
 
   /* box-shadow: 0 4px 4px 4px yellowgreen; */
+}
+
+input:checked + .slider {
+  background-color: rgba(16, 181, 151, 0.852);
+  box-shadow: 0 0 3px 3px rgba(120, 232, 164, 0.852);
+}
+
+input:checked + .slider::before {
+  transform: translateX(2.5rem);
+  box-shadow: 0 0 3px 5px rgba(120, 232, 164, 0.852);
 }
