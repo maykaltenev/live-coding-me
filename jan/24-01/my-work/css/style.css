@@ -13,16 +13,21 @@ body {
     sans-serif;
   width: 100vw;
   height: 100vh;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 /* form */
 form {
-  margin: 25% auto;
-  width: 50%;
-  height: 50%;
+  margin: 10% 5%;
+  width: 55%;
+  height: 60%;
 }
 fieldset {
-  border-radius: 2%;
+  border-radius: 8%;
+  background-color: #d5e5f2;
+}
+
+fieldset:hover {
+  transition: 0.3s;
 }
 fieldset input,
 select {
@@ -35,11 +40,12 @@ select {
   border-bottom: 2px gray solid;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--my-fav);
 }
 fieldset input:focus,
 select:focus {
   outline: none;
-  border-bottom: 2px orange solid;
+  border-bottom: 2px #f25252 solid;
 }
 /* fancy checkbox */
 .toggle {
@@ -78,7 +84,7 @@ select:focus {
 .slider::before {
   position: absolute;
   content: "";
-  border-radius: 100%;
+  border-radius: 50%;
   left: 0.2rem;
   bottom: 0.45rem;
   width: 1rem;
