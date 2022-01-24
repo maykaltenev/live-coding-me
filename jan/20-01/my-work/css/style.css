@@ -54,9 +54,6 @@ p::first-letter {
 }
 
 /* display:none vs opacity: 0 */
-
-/* vh & vw */
-
 .car {
   /* view port width */
   width: 50vw;
@@ -65,6 +62,8 @@ p::first-letter {
   filter: grayscale(75);
   opacity: 1;
 }
+
+/* vh & vw */
 
 /* visual content like img */
 /*  % , border-radius */
