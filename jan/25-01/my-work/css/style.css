@@ -1,0 +1,22 @@
+/* font */
+@import url();
+
+/* root
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body */
+.container {
+  width: 15rem;
+  height: 20rem;
+  border: 2px black solid;
+}
+
+.container div {
+  width: 3rem;
+  height: 5rem;
+}
