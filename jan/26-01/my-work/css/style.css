@@ -5,27 +5,34 @@
   flex-wrap: wrap-reverse; */
 
   /* shorthand */
-  flex-flow: row wrap;
+  flex-flow: row-reverse wrap;
   align-items: center;
   width: 20rem;
   height: 30rem;
   border: 2px black solid;
 }
 .child {
-  width: 5rem;
-  height: 8rem;
+  /* width: 5rem;
+  height: 8rem; */
   color: white;
   margin-left: 1rem;
   border: 2px black solid;
 }
 .green {
   background-color: lightgreen;
+  order: 1;
+  flex-grow: 8;
 }
 .red {
   background-color: lightcoral;
+  flex-grow: 4;
 }
 .black {
   background-color: black;
+  flex-grow: 2;
+}
+.box {
+  order: 3;
 }
 
 /* flex-direction: row; */
@@ -60,3 +67,19 @@ align-items cross-axis */
  */
 
 /*  flex-basis : sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with box-sizing. */
+table {
+  width: 90vw;
+  height: 90vh;
+  margin: 10vh auto;
+}
+td {
+  text-align: center;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 10%;
+  border: 2px gray solid;
+}
+td:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
