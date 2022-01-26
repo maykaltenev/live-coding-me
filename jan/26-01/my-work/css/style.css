@@ -1,15 +1,21 @@
 .container {
   display: flex;
-  justify-content: space-around;
-  flex-direction: column-reverse;
-  align-items: top;
-  width: 40rem;
-  height: 60rem;
+  justify-content: space-evenly;
+  /* flex-direction: row;
+  flex-wrap: wrap-reverse; */
+
+  /* shorthand */
+  flex-flow: row wrap;
+  align-items: center;
+  width: 20rem;
+  height: 30rem;
   border: 2px black solid;
 }
 .child {
   width: 5rem;
   height: 8rem;
+  color: white;
+  margin-left: 1rem;
   border: 2px black solid;
 }
 .green {
@@ -22,6 +28,14 @@
   background-color: black;
 }
 
+/* flex-direction: row; */
+/* justify-content for the main-axis */
+/* align-items for the cross-axis */
+
+/* flex-direction: column; */
+/* justify-content main-axis
+align-items cross-axis */
+
 /* special effects */
 /*  order : sets the order to lay out an item in a flex */
 
@@ -29,7 +43,10 @@
 
 /*  flex-shrink : sets the flex shrink factor of a flex item, no negative numbers*/
 
-/* flex-wrap : sets whether flex items are forced onto one line or can wrap onto multiple lines */
+/* flex-wrap : sets whether flex items are forced onto one line or can wrap onto multiple lines;
+/* .container {
+  /* flex-wrap: nowrap | wrap | wrap-reverse; 
+} */
 
 /* flex-direction : sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). */
 
