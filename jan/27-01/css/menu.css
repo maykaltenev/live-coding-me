@@ -6,7 +6,7 @@ header {
   height: 5vh;
   background-color: var(--company-them-bg-color);
 }
-header new {
+header nav {
   flex-grow: 2;
 }
 header nav ul {
