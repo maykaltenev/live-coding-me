@@ -11,3 +11,11 @@
   height: 75vh;
   border: 2px red dashed;
 }
+.shape {
+  width: 50%;
+  height: 40%;
+  border-radius: 100% 10%;
+  transform: rotate(60deg);
+  opacity: 0.8;
+  background-color: var(--company-them-logo-color);
+}

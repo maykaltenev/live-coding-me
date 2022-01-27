@@ -2,10 +2,10 @@
 .logo {
   flex-grow: 1;
   align-self: center;
-  border: 2px red dashed;
+  /* border: 2px red dashed;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-end; */
 }
 /* .logo :nth-child(1) */
 .logo :first-child {
