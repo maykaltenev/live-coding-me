@@ -1,0 +1,13 @@
+/*  Main   */
+.main-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-container article {
+  width: 80%;
+  height: 75vh;
+  border: 2px red dashed;
+}
