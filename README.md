@@ -1,6 +1,6 @@
 # live-coding
 
-## This is my repository related to my Web Developer Course at Digital Career Institute
+## This is my repository related to the Web Developer Course at Digital Career Institute
 
 [<img align="left" alt="dci" width="800px" src="./images/web-dev-dci.jpg" />][dci]
 
