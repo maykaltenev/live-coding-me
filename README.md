@@ -2,7 +2,7 @@
 
 ## This is my repository related to the Web Developer Course at Digital Career Institute
 
-[<img align="left" alt="dci" width="800px" src="./images/web-dev-dci.jpg" />][dci]
+[<img align="center" alt="dci" width="800px" src="./images/web-dev-dci.jpg" />][dci]
 
 [dci]: https://digitalcareerinstitute.org/courses/web-development-course
 
