@@ -6,7 +6,7 @@
 
 [dci]: https://digitalcareerinstitute.org/courses/web-development-course
 
-<br/>
+
 
 ## Important Basics
 
