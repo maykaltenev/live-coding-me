@@ -1,6 +1,43 @@
 div {
   border: 2px black solid;
 }
+
+/* 1fr = fraction;  */
 .container {
   display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, minmax(250px, 500px)); */
+  /* we can only use repeat if the measure is the same example - 1fr 1fr 1fr 1fr;*/
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-rows: 1fr 1fr 1px 1fr;
+  grid-template-rows: 5vh repeat(4, 75vh) 10vh; */
+  grid-template-areas:
+    "men men men"
+    "main main about"
+    "main main about"
+    "footer footer footer";
+}
+/* notations 
+--var()
+minmax()
+url()
+repeat()
+*/
+
+.item-a {
+  grid-area: men;
+  background-color: gray;
+}
+.item-b {
+  grid-area: main;
+  background-color: red;
+}
+.item-c {
+  grid-area: about;
+  background-color: orange;
+}
+.item-d {
+  grid-area: footer;
+  background-color: blue;
 }
