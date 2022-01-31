@@ -6,8 +6,6 @@
 
 [dci]: https://digitalcareerinstitute.org/courses/web-development-course
 
-<br/>
-
 ## Important Basics
 
 1. Git and Github
