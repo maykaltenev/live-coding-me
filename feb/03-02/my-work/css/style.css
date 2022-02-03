@@ -20,9 +20,14 @@ body {
 }
 
 /* screen */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
   body {
     background-color: aqua;
+  }
+  .text {
+  }
+  h1 {
+    width: 50px;
   }
 }
 @media only screen and (orientation: landscape) {
