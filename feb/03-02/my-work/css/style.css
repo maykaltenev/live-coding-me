@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* I'll delete all our previous videos */
+body {
+  background-color: orange;
+}
+/* more selectors */
 
 /* print */
 @media print {
@@ -17,6 +20,13 @@
 }
 
 /* screen */
+@media only screen and (max-width: 1000px) {
+  body {
+    background-color: aqua;
+  }
+}
+@media only screen and (orientation: landscape) {
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
