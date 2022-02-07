@@ -34,7 +34,7 @@ body {
 }
 */
   /* grid-template-columns: 10vw 1fr; */
-  grid-template-rows: 5vh repeat(3, 75vh) 10vh;
+  grid-template-rows: 8vh repeat(3, 75vh) 10vh;
   grid-template-areas:
     "menu"
     "intro"
@@ -45,8 +45,10 @@ body {
 /* .side {
   grid-area: side;
 }  */
-@media only screen and (max-width: 450px) {
+/* tablets */
+@media only screen and (min-width: 600px) {
   body {
-    font-size: 1.2rem;
+    background-color: greenyellow;
+    font-size: 1.2;
   }
 }

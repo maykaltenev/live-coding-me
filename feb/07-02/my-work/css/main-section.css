@@ -25,3 +25,21 @@
   background: radial-gradient(ellipse at top, rgba(148, 237, 207, 0.755), gray);
   height: 100%;
 }
+.clients-container article {
+  display: flex;
+  height: 100%;
+  border: 2px red solid;
+  text-align: justify;
+  justify-content: center;
+}
+/* our client text */
+.clients-container article div {
+  height: 50%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  border: 2px red solid;
+}
