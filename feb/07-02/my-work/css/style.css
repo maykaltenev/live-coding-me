@@ -14,7 +14,6 @@
 :root {
   font-size: 16px;
 }
-
 body {
   /* height is not needed because grid will do it for us */
   width: 100vw;
@@ -46,3 +45,8 @@ body {
 /* .side {
   grid-area: side;
 }  */
+@media only screen and (max-width: 450px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
