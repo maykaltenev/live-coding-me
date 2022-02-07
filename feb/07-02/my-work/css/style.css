@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Pacifico&family=Sedgwick+Ave&display=swap");
+@import url("./logo.css");
+@import url("./anchors.css");
+@import url("./menu.css");
+@import url("./main-section.css");
+@import url("./footer.css");
+
+/* setting first the mobile version */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+}
+
+body {
+  /* height is not needed because grid will do it for us */
+  width: 100vw;
+  display: grid;
+  /* nav 3 x main-container x footer */
+  /* rows are making our hight */
+  /* grid-template-rows: 5vh repeat(3, 75vh) 10vh; */
+  /* when we pick the columns we go for width */
+
+  /* with aside menu */
+  /* grid-template-columns: 10vw 1fr;
+  grid-template-areas:
+    "menu menu"
+    "intro intro"
+    "side products"
+    "side clients"
+    "side footer";
+}
+*/
+  /* grid-template-columns: 10vw 1fr; */
+  grid-template-rows: 5vh repeat(3, 75vh) 10vh;
+  grid-template-areas:
+    "menu"
+    "intro"
+    "products"
+    "clients"
+    "footer";
+}
+/* .side {
+  grid-area: side;
+}  */

@@ -1,0 +1,37 @@
+/* footer */
+/* footer */
+footer {
+  grid-area: footer;
+  /* width: 100vw */
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* hide all the elements out of the size */
+  /* overflow: hidden;
+  overflow: scroll; */
+}
+/* white line is shown when the content is more than the given sizes */
+
+/* target the parent */
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  /* take the parent 50% width */
+  width: 50%;
+  margin-bottom: 1%;
+}
+footer ul li {
+  display: inline;
+}
+/* the line at the end of the page */
+footer hr {
+  width: 100%;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+}
