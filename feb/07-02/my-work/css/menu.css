@@ -24,6 +24,16 @@ a {
   color: 0.5rem;
   background-color: orange;
 }
+.navbar {
+  border: 1px rgb(0, 255, 51) solid;
+  width: 100%;
+}
+.subnav {
+  border: 1px rgb(255, 111, 0) solid;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
 .subnavbtn {
   border: none;
   background-color: inherit;
@@ -31,6 +41,8 @@ a {
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 1%;
+  border: 5px rgb(251, 0, 255) solid;
+  width: 100%;
 }
 .subnav-content {
   display: none;
