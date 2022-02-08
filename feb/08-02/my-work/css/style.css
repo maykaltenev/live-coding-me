@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* some var */
+  --the-best-color: orange;
+}
+.box {
+  width: 3rem;
+  height: 2rem;
+  background-color: var(--the-best-color);
+  /* step num 1 ani name */
+  animation: move;
+  animation-duration: 5s;
+}
+/* step 3 your keyframes */
+@keyframes move {
+  0% {
+    width: 1rem;
+  }
+  1% {
+    width: 10rem;
+  }
+  25% {
+    width: 5rem;
+  }
+  30% {
+    width: 0rem;
+    background-color: red;
+  }
+  45% {
+    width: 10rem;
+  }
+  50% {
+    width: 60rem;
+    background-color: blueviolet;
+  }
+  55% {
+    width: 15rem;
+  }
+  100% {
+    width: 45rem;
+  }
+}
+/* from {
+}
+to {
+} */
+.shape {
+  width: 50vw;
+  height: 15rem;
+  background-color: pink;
+  animation-name: change;
+  animation-duration: 3s;
+  /* non stop showing the animation */
+  animation-iteration-count: infinite;
+  /*  */
+  animation-delay: 5;
+  display: block;
+  position: absolute;
+}
+@keyframes change {
+  0% {
+    opacity: 0;
+    top: 0;
+    left: 0;
+  }
+  50% {
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    opacity: 1;
+    top: 80%;
+    left: 80%;
+  }
+}
+
+.dci {
+  font-size: 3rem;
+  animation-name: letter-moving;
+  animation-duration: 3s;
+}
+.dci :nth-child(1) {
+  font-size: 3rem;
+  animation-name: letter-moving;
+  animation-duration: 3s;
+  color: blue;
+}
+.dci :nth-child(2) {
+  font-size: 3rem;
+  animation-name: letter-moving;
+  animation-duration: 3s;
+  color: rgb(0, 187, 255);
+}
+.dci :nth-child(3) {
+  font-size: 15rem;
+  animation-name: letter-moving;
+  animation-duration: 5s;
+  color: rgb(162, 0, 255);
+}
+@keyframes letter-D {
+  0% {
+    font-size: 15rem;
+  }
+  50% {
+    font-size: 25rem;
+  }
+  100% {
+    font-size: 35rem;
+  }
+}
