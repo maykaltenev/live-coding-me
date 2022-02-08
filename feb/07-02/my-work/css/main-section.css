@@ -3,16 +3,35 @@
 /* after setting the grid we should add the 100% height   */
 .intro-container {
   grid-area: intro;
-  background-color: rgba(76, 76, 232, 0.912);
+  background: #c9eef2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
+}
+.intro-container article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+.intro-container article div {
+  display: flex;
+  background-color: #c2dfe3a1;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5%;
 }
 .products-container {
   grid-area: products;
-  background-color: rgba(238, 91, 91, 0.809);
+  background-color: #8ebabfec;
   height: 100%;
   display: grid;
   padding: 5%;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
 }
 .products-container article {
   background-color: white;
@@ -22,24 +41,40 @@
 }
 .clients-container {
   grid-area: clients;
-  background: radial-gradient(ellipse at top, rgba(148, 237, 207, 0.755), gray);
+  background: #639fa6e7;
   height: 100%;
 }
 .clients-container article {
   display: flex;
   height: 100%;
-  border: 2px red solid;
   text-align: justify;
   justify-content: center;
 }
-/* our client text */
-.clients-container article div {
-  height: 50%;
-  width: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 
-  border: 2px red solid;
+/* our client text */
+.products-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 19%;
+  width: 25%;
+  height: 55%;
+  background-color: #1b3c40;
+  border-radius: 20% 35% 1% 15%;
+  z-index: -1;
+  transform: scale(2);
+}
+.products-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 25%;
+  height: 55%;
+  background-color: #1d5e67;
+  border-radius: 20% 35% 1% 15%;
+  z-index: -1;
+  transform: scale(2);
 }

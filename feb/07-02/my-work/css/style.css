@@ -34,7 +34,7 @@ body {
 }
 */
   /* grid-template-columns: 10vw 1fr; */
-  grid-template-rows: 8vh repeat(3, 75vh) 10vh;
+  grid-template-rows: 8vh repeat(3, 70vh) 15vh;
   grid-template-areas:
     "menu"
     "intro"
@@ -48,7 +48,6 @@ body {
 /* tablets */
 @media only screen and (min-width: 600px) {
   body {
-    background-color: greenyellow;
     font-size: 1.2;
   }
 }

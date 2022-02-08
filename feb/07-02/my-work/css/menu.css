@@ -5,7 +5,7 @@ header {
   display: flex;
 }
 .navbar {
-  background-color: lightgray;
+  background-color: #8ebabf;
   grid-area: menu;
   display: flex;
   justify-content: space-evenly;
@@ -22,15 +22,13 @@ a {
   list-style: none;
   font-size: 1rem;
   color: 0.5rem;
-  background-color: orange;
+  background-color: #c9eef2;
 }
 .navbar {
-  border: 1px rgb(0, 255, 51) solid;
   width: 100%;
 }
 .subnav {
-  border: 1px rgb(255, 111, 0) solid;
-  width: 25%;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
@@ -41,8 +39,6 @@ a {
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 1%;
-  border: 5px rgb(251, 0, 255) solid;
-  width: 100%;
 }
 .subnav-content {
   display: none;
@@ -52,10 +48,17 @@ a {
 .subnav:hover .subnav-content {
   display: block;
   transition: all 0.5s ease-in;
+  position: absolute;
+  top: 100%;
+  width: 28%;
+}
+.list-item {
+  text-align: center;
+  padding: 1% 2%;
 }
 .list-item:hover {
   background-color: lightgray;
-  color: orange;
+  color: #cef09d;
   transition: all 0.5 ease-in;
 }
 /* fancy shapes */
@@ -63,11 +66,24 @@ header::before {
   content: "";
   display: block;
   position: absolute;
-  top: 20%;
-  bottom: 50%;
-  background-color: orange;
-  width: 80%;
-  height: 50%;
-  border-radius: 50% 10% 25% 55%;
+  bottom: 25%;
+  background-color: #1b3c40;
+  width: 55%;
+  height: 35%;
+  border-radius: 50% 10% 10% 55%;
   z-index: -1;
+  transform: rotate(-90deg);
+}
+header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  width: 50%;
+  height: 50%;
+  background-color: #639fa6;
+  border-radius: 50% 10% 10% 55%;
+  transform: rotate(90deg);
+  z-index: -2;
 }
