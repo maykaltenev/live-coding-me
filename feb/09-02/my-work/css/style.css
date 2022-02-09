@@ -9,20 +9,20 @@
   --company-styled-font: "Lato", sans-serif;
 }
 body {
-  font-size: var(--company-styled-font);
+  font-family: var(--company-styled-font);
 }
 nav {
   width: 20vw;
   height: 30vh;
-  border: 2px red dashed;
-  padding: 2vh 2vw;
   transition: 2s ease-in;
-  color: rgba(0, 0, 0, 0.755);
+  background-color: rgba(0, 0, 0, 0.755);
   border-radius: 2px;
+  padding: 2vh 2vw;
+  transition: 0.1 ease-in;
   /* step 1 */
   animation-name: dropdown-menu-move;
   /* step 2 */
-  animation-duration: 6s;
+  animation-duration: 1s;
 }
 /* if there is no 100% written it is automatically go to the give height */
 @keyframes dropdown-menu-move {
@@ -37,11 +37,17 @@ nav {
 
 ul {
   list-style: none;
-  text-align: center;
+  /* text-align:left */
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+nav ul li {
+  width: 100%;
+  border-radius: 2px;
 }
 nav ul li a {
   color: whitesmoke;
@@ -49,7 +55,6 @@ nav ul li a {
 }
 ul li:hover {
   background-color: whitesmoke;
-  color: rgba(0, 0, 0, 0.755);
 }
 ul li:hover > a {
   color: rgba(0, 0, 0, 0.755);
