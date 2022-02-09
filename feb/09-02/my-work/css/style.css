@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* var */
+  --company-styled-font: "Lato", sans-serif;
+}
+body {
+  font-size: var(--company-styled-font);
+}
+nav {
+  width: 20vw;
+  height: 30vh;
+  border: 2px red dashed;
+  padding: 2vh 2vw;
+  transition: 2s ease-in;
+  color: rgba(0, 0, 0, 0.755);
+  border-radius: 2px;
+  /* step 1 */
+  animation-name: dropdown-menu-move;
+  /* step 2 */
+  animation-duration: 6s;
+}
+/* if there is no 100% written it is automatically go to the give height */
+@keyframes dropdown-menu-move {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 30vh;
+  }
+}
+/* animation-name: go-up-menu-move; */
+
+ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+nav ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+ul li:hover {
+  background-color: whitesmoke;
+  color: rgba(0, 0, 0, 0.755);
+}
+ul li:hover > a {
+  color: rgba(0, 0, 0, 0.755);
+}
