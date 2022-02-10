@@ -1,5 +1,22 @@
 /* footer */
 footer {
   grid-area: footer;
-  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 1px red solid;
+  flex-direction: column;
+}
+
+footer div:first-child {
+  width: 80%;
+  height: 25%;
+  border: 1px rgb(47, 0, 255) solid;
+  justify-content: center;
+  align-items: ce;
+}
+
+footer div:last-child {
+  border: 1px green solid;
+  width: 100%;
+  height: 100%;
 }

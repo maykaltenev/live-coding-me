@@ -17,7 +17,7 @@ body {
     "card"
     "footer";
 }
-@media only screen and (min-width: 600) {
+@media only screen and (min-width: 600px) {
   body {
     grid-template-rows: 15vh repeat(4, 75vh);
   }
@@ -26,7 +26,7 @@ body {
     justify-content: flex-end;
   }
 }
-@media only screen and (min-width: 900) {
+@media only screen and (min-width: 900px) {
   body {
     grid-template-rows: 15vh repeat(4, 65vh);
   }

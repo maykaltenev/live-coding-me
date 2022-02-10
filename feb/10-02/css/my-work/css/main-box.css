@@ -1,20 +1,49 @@
 /* main */
 .main-landing-part {
   grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .main-landing-part div:first-child {
   border-top: 8px red solid;
   width: 100vw;
-  height: 100vh;
+  height: 15vh;
 }
 .main-landing-part div img {
   width: 100%;
-  height: 10%;
+  height: 100%;
 }
-
+/* header */
+.main-landing-part div h2 {
+  font-size: 1rem;
+}
+.main-landing-part div p {
+  font-size: 1rem;
+}
+.main-landing-part div div {
+  width: 100%;
+  height: 15%;
+  border: 1px gray solid;
+  border: 12%;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  color: white;
+  font-weight: 900;
+  padding: 1%;
+  margin: 1%;
+}
 .slider {
   grid-area: slider;
+  width: 100%;
+  height: 100%;
+  border: 1px red solid;
 }
+
 .card {
   grid-area: card;
+  width: 100%;
+  height: 100%;
+  border: 1px rgb(25, 0, 255) solid;
 }
