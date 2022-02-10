@@ -1,0 +1,7 @@
+header .logo {
+  border: 2px red solid;
+  border: 20%;
+  color: red;
+  width: 2.5rem;
+  font-weight: 900;
+}
