@@ -22,17 +22,19 @@ body {
     grid-template-rows: 15vh repeat(4, 75vh);
   }
   header nav .menu {
-    width: 10vw;
-    justify-content: flex-end;
+    display: none;
   }
 }
+<<<<<<< HEAD
 @media only screen and (min-width: 900px) {
+=======
+@media only screen and (max-width: 750px) {
+>>>>>>> 13402935f17b12be41b76a3131c830c287832f6a
   body {
     grid-template-rows: 15vh repeat(4, 65vh);
   }
-
   header nav .menu {
-    width: 10vw;
-    justify-content: flex-end;
+    border: 2px orange solid;
+    display: none;
   }
 }
