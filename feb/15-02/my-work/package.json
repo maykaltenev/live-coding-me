@@ -17,6 +17,11 @@
     "publish": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Maykal Tenev",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "live-server": "^1.2.1",
+    "sass": "^1.49.7"
+  }
 }
