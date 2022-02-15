@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD:feb/15-02/my-work/package.json
   "name": "my-work",
+=======
+  "name": "15-02",
+>>>>>>> 5f8d77b44877171889b44a4a08d13ed12b1ea289:feb/15-02/package.json
   "version": "1.0.0",
   "description": "This is a SASS deploy test\"",
   "main": "index.js",
@@ -16,6 +20,7 @@
     "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
     "publish": "gh-pages -d dist"
   },
+<<<<<<< HEAD:feb/15-02/my-work/package.json
   "keywords": [
     "SASS",
     "npm",
@@ -25,6 +30,9 @@
     "json"
   ],
   "author": "Maykal Tenev",
+=======
+  "author": "Hadi",
+>>>>>>> 5f8d77b44877171889b44a4a08d13ed12b1ea289:feb/15-02/package.json
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^3.2.3",
