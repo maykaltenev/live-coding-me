@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "first-packages": "npm i --save-dev sass live-server gh-pages npm-run-all",
+    "first-package": "npm i --save-dev sass live-server gh-pages npm-run-all",
     "start": "run-p watch watch:styles",
     "build": "run-s clean clean:styles build:styles copy",
     "deploy": "run-s build publish",
