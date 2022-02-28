@@ -4,6 +4,7 @@
 }
 .but-container {
   height: 30vh;
+  background-color: rgba(111, 76, 111, 0.743);
 }
 /* set a size for the button */
 .but-container > button {
