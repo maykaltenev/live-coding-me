@@ -1,0 +1,12 @@
+.body-h {
+  height: 95vh;
+  border: 1px red solid;
+}
+.but-container {
+  height: 30vh;
+}
+/* set a size for the button */
+.but-container > button {
+  height: 5vh;
+  width: 10vw;
+}
