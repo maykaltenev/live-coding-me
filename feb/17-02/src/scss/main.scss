@@ -1,23 +1,8 @@
 body {
   background-color: orange;
 }
-// header nav ul {
-//   display: flex;
-//   justify-content: space-around;
-//   width: 50vw;
-// }
-// header nav ul li {
-//   list-style: none;
-// }
-// header nav ul li a {
-//   color: black;
-//   text-decoration: none;
-// }
-// header nav ul li a:hover {
-//   color: whitesmoke;
-//   background-color: gray;
-// }
 header {
+<<<<<<< HEAD
   span {
     background-color: black;
     border-radius: 50%;
@@ -37,6 +22,24 @@ header {
         &:hover {
           color: whitesmoke;
           background-color: gray;
+=======
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50vw;
+      li {
+        list-style: none;
+        a {
+          color: black;
+          text-decoration: none;
+          &:hover {
+            background-color: gray;
+          }
+          &:active {
+          }
+>>>>>>> 871edc653327dcdb667b0c10a7557c179a17b03e
         }
       }
     }

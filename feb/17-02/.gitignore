@@ -5,5 +5,9 @@ src/styles/
 # Dependency dir
 node_modules/
 # VS code config
+<<<<<<< HEAD
 .vscode/ 
 .DS_Store
+=======
+.vscode/ 
+>>>>>>> 871edc653327dcdb667b0c10a7557c179a17b03e
