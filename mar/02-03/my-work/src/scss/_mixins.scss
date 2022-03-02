@@ -34,6 +34,10 @@
   justify-content: $justify;
   align-items: $align;
 }
+@mixin shadow($color) {
+  color: $color;
+  box-shadow: 0 0 24px 16px $color;
+}
 @mixin fade-in($time, $width, $height) {
   animation-name: fade-in;
   animation-duration: $time;
