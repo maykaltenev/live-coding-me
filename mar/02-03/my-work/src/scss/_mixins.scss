@@ -1,0 +1,77 @@
+// Resting
+@mixin rest-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+// Center things
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Sizes for box
+@mixin box-size {
+  width: 3rem;
+  height: 3rem;
+}
+// Hide element
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+// Revel
+@mixin revel {
+  opacity: 1;
+  visibility: visible;
+}
+@mixin box-size-width-random-val($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin flex-IDK($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin shadow($color) {
+  color: $color;
+  box-shadow: 0 0 24px 16px $color;
+}
+@mixin fade-in($time, $width, $height) {
+  animation-name: fade-in;
+  animation-duration: $time;
+  animation-duration: alternate;
+  animation-iteration-count: infinite;
+  @include box-size-width-random-val($width, $height);
+}
+div {
+  background-color: gray;
+}
+.box {
+  background: purple;
+  @include fade-in(3s, 2rem, 3rem);
+}
+
+.box1 {
+  @include box-size();
+}
+.box2 {
+  background-color: red;
+  @include fade-in(5s, 5rem, 8rem);
+}
+
+.box4 {
+  @include fade-in(5s, 20rem, 15rem);
+  @include box-size-width-random-val(45rem, 15rem);
+  background-color: rgb(0, 200, 255);
+}
+@keyframes fade-in {
+  0% {
+    @include hide();
+    @include box-size();
+  }
+  100% {
+    @include revel();
+  }
+}
