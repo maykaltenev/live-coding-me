@@ -18,7 +18,7 @@ $font-sizes: (
   @if map-has-key($font-sizes, $size) {
     font-size: map-get($font-sizes, $size);
   } @else {
-    @error "#{size} not defined.";
+    @error "#{size} not defined. Please use #{map-keys($map-font-size)}";
   }
 }
 $orange-colors: (
@@ -56,5 +56,14 @@ $orange-colors: (
     border-right: 100px solid $color;
   } @else {
     @error "Unknown direction #{$direction} ";
+  }
+}
+@mixin clr($x: green) {
+  color: $x;
+}
+div {
+  color: red;
+  p {
+    @include clr();
   }
 }
