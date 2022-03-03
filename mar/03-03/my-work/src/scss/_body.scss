@@ -1,0 +1,3 @@
+.box {
+  @include box-sizing(3rem, 250px, black);
+}
