@@ -1,3 +1,7 @@
 .box {
   @include box-sizing(3rem, 250px, black);
 }
+section div {
+  @include flex(flex, center, flex-end);
+  @include font-size("m");
+}

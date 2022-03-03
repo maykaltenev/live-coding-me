@@ -6,8 +6,31 @@ $font-sizes: (
   xl: 20px,
   xxl: 22px,
 );
+@mixin font-size($size) {
+  @if map-has-key($font-sizes, $size) {
+    font-size: map-get($font-sizes, $size);
+  } @else {
+    @error "This is not defined.";
+  }
+}
+@mixin font-size($size) {
+  //   @if map-has-value($font-sizes, $size) {
+  @if map-has-key($font-sizes, $size) {
+    font-size: map-get($font-sizes, $size);
+  } @else {
+    @error "#{size} not defined.";
+  }
+}
 $orange-colors: (
   light: #fca82b,
   dark: #df8d11,
   super: #ffb83c,
 );
+
+@function font-size($size) {
+  @if map-has-key($map-font-sizes, $size) {
+    @return map-get($map-font-sizes, $size);
+  } @else {
+    @error "#{$size} is not okay.";
+  }
+}
