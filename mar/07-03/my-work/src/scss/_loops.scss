@@ -23,6 +23,6 @@
   .item:nth-child(#{$i}) {
     background-color: lighten(orange, random(40));
     $height: random(40) + vh;
-    @include move-animation-setup(random(3) + s);
+    @include move-animation-setup(random($i) + s);
   }
 }
