@@ -21,9 +21,14 @@
 }
 @for $i from 1 through $item-count {
   .item:nth-child(#{$i}) {
-    background-color: lighten(orange, random(40));
+    background-color: lighten(rgba(random(255), 0, 0), random(40));
     height: random(40) + vh;
-    @include move-animation-setup(random($i) + s);
+    border-radius: 30% 5%;
+    @if ($i % 2 == 0) {
+      background-color: lighten(gray, random(40));
+      @include move-animation-setup(random($i) + s);
+      align-self: end;
+    }
   }
   // i + 1
 }
