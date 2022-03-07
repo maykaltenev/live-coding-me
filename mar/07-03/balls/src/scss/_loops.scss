@@ -6,15 +6,15 @@
     transform: rotateX(180deg) rotateY(180deg);
   }
   100% {
-    transform: rotateYs(360deg) rotateY(360deg);
+    transform: rotateY(360deg) rotateY(360deg);
   }
 }
 @keyframes rotate-right {
   0% {
-    transform: skewX(90deg) skewY(90deg);
+    transform: skewY(90deg) skewY(90deg);
   }
   50% {
-    transform: skewY(180deg) skewY(180deg);
+    transform: skewZ(180deg) skewX(180deg);
   }
   100% {
     transform: skewX(360deg) skewX(360deg);
@@ -62,8 +62,7 @@ body {
       background-color: lighten($blue, random(50));
       @include move-animation-setup(rotate, random($i) + s);
     } @else {
-      background-color: lighten($purple, random(50));
-
+      background-color: lighten($pink, random(50));
       @include move-animation-setup(rotate-right, random($i) + s);
     }
   }
