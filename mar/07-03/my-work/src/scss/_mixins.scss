@@ -15,3 +15,8 @@ to check something
     @error " #{$map-key} is not defined, Please use #{map-keys($div-width)} ";
   }
 }
+.box1 {
+  @include find-div-width("sm");
+  background-color: orange;
+  height: 5em;
+}
