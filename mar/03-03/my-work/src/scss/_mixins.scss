@@ -1,3 +1,5 @@
+$xs-font-size: 12px;
+$sm-font-size: 14px;
 // hard coded - value are set
 @mixin header-font-styles {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -14,4 +16,13 @@
   display: $display;
   justify-content: $justify;
   $align-items: $align;
+}
+// menu setups
+@mixin menu-setup {
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
 }
