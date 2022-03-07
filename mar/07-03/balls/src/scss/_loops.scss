@@ -53,16 +53,17 @@ body {
   .ball:nth-child(#{$i}) {
     background-color: $pink;
     transform-style: preserve-3d;
-    // box-shadow: 0 0 12vmin 0 $Summer-wall-design-5-hex;
+    box-shadow: 0 0 12vh 0 $blue;
     width: 15rem;
     height: 15rem;
     border-radius: 100%;
+    border: 5px rgba(190, 228, 230, 0.681) solid;
     @include middle;
     @if ($i % 2 == 0) {
       background-color: lighten($blue, random(50));
       @include move-animation-setup(rotate, random($i) + s);
     } @else {
-      background-color: lighten($pink, random(50));
+      background-color: lighten($purple, random(50));
       @include move-animation-setup(rotate-right, random($i) + s);
     }
   }
@@ -70,7 +71,7 @@ body {
     @if ($i % 2 == 0) {
       background-color: lighten($purple, random(50));
     } @else {
-      background-color: lighten($blue, random(50));
+      background-color: lighten($pink, random(50));
     }
   }
   // i + 1
