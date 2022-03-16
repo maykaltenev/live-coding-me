@@ -10,20 +10,18 @@
 - JavaScript values
 - different types of values
 - introduction to variables
-    - `let`
+  - `let`
 - variable declaration
 - the assignment operator
 - changing the value of a variable
 - the `typeof` operator
 - writing comments
 
-
 ### Exercises
 
 #### console.log
 
-https://classroom.github.com/a/SvPMcdzy
-
+https://classroom.githu b.com/a/SvPMcdzy
 
 ### Resources
 
