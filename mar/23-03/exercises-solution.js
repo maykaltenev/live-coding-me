@@ -35,9 +35,9 @@ let fionaYear = parseInt(fionaBirthdate.slice(-4));
 // );
 
 let result =
-    jacobYear < fionaYear
-        ? "Jacob is older than Fiona"
-        : "Fiona is older than Jacob";
+  jacobYear < fionaYear
+    ? "Jacob is older than Fiona"
+    : "Fiona is older than Jacob";
 
 // let result =
 //   jacobYear < fionaYear
@@ -58,14 +58,14 @@ console.log(result);
 // Fiona is 3 years older than Jacob
 
 let ageDifference =
-    jacobYear > fionaYear ? jacobYear - fionaYear : fionaYear - jacobYear;
+  jacobYear > fionaYear ? jacobYear - fionaYear : fionaYear - jacobYear;
 
 console.log(ageDifference);
 
 let result2 =
-    jacobYear < fionaYear
-        ? `Jacob is ${ageDifference} years older than Fiona`
-        : `Fiona is ${ageDifference} years older than Jacob`;
+  jacobYear < fionaYear
+    ? `Jacob is ${ageDifference} years older than Fiona`
+    : `Fiona is ${ageDifference} years older than Jacob`;
 
 console.log(result2);
 
@@ -82,24 +82,24 @@ let largestValue = Math.max(a, b, c);
 // approach 1
 // to check if number is even: number % 2 === 0
 console.log(
-    largestValue % 2 === 0
-        ? `${largestValue} is an even number`
-        : `${largestValue} is an odd number`
+  largestValue % 2 === 0
+    ? `${largestValue} is an even number`
+    : `${largestValue} is an odd number`
 );
 
 // approach 2
 // to check if number is odd: number % 2 === 1
 console.log(
-    largestValue % 2 === 1
-        ? `${largestValue} is an odd number`
-        : `${largestValue} is an even number`
+  largestValue % 2 === 1
+    ? `${largestValue} is an odd number`
+    : `${largestValue} is an even number`
 );
 
 // approach 3
 let isOdd = largestValue % 2 === 1;
 
 console.log(
-    isOdd
-        ? `${largestValue} is an odd number`
-        : `${largestValue} is an even number`
+  isOdd
+    ? `${largestValue} is an odd number`
+    : `${largestValue} is an even number`
 );
