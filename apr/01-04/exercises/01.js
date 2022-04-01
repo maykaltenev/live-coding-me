@@ -3,12 +3,26 @@
  * Write a function that compares two integers and prints to the console the larger
  */
 
+let number = 2;
+let secondNumber = 9;
+function theBiggerNumber() {
+    if (number > secondNumber) {
+        console.log(`The num ${number} is bigger than num ${secondNumber}`);
+    } else if (number < secondNumber) {
+        console.log(`The num ${secondNumber} is bigger than num ${number}`);
+    } else {
+        console.log(`The num ${number} and num ${secondNumber} are equal`);
+    }
+}
+theBiggerNumber()
 /**
  * 02 Easy - Print Even or Odd
  * Write a function that will iterate from 0 to 15. 
  * For each iteration, it will check if the current number is odd or even, 
  * and display a message to the screen
  */
+
+easyPrint()
 
 /**
  * 03 Medium - Check Grades
