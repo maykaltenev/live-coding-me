@@ -3,19 +3,18 @@
  * Write a function that compares two integers and prints to the console the larger
  */
 
-let number = 2;
-let secondNumber = 9;
-function theBiggerNumber() {
+
+function theBiggerNumber(number, secondNumber) {
     console.log('Exercise 1:')
     if (number > secondNumber) {
-        console.log(`The num ${number} is bigger than num ${secondNumber}`);
+        return `The num ${number} is bigger than num ${secondNumber}!`;
     } else if (number < secondNumber) {
-        console.log(`The num ${secondNumber} is bigger than num ${number}`);
+        return `The num ${secondNumber} is bigger than num ${number}!`;
     } else {
-        console.log(`The num ${number} and num ${secondNumber} are equal`);
+        return `The num ${number} and num ${secondNumber} are equal!`;
     }
 }
-theBiggerNumber()
+console.log(theBiggerNumber(2, 9));
 /**
  * 02 Easy - Print Even or Odd
  * Write a function that will iterate from 0 to 15. 
