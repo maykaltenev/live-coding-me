@@ -3,8 +3,7 @@
  * Write a function that compares two integers and prints to the console the larger
  */
 
-
-function theBiggerNumber(number, secondNumber) {
+let theBiggerNumber = (number, secondNumber) => {
     console.log('Exercise 1:')
     if (number > secondNumber) {
         return `The num ${number} is bigger than num ${secondNumber}!`;
@@ -14,7 +13,7 @@ function theBiggerNumber(number, secondNumber) {
         return `The num ${number} and num ${secondNumber} are equal!`;
     }
 }
-console.log(theBiggerNumber(2, 9));
+console.log(theBiggerNumber(12, 9));
 /**
  * 02 Easy - Print Even or Odd
  * Write a function that will iterate from 0 to 15. 
@@ -23,17 +22,19 @@ console.log(theBiggerNumber(2, 9));
  */
 
 
-function easyPrint() {
+let easyPrint = () => {
     console.log('Exercise 2:')
+    let array = [];
     for (let i = 0; i <= 15; i++) {
         if (i % 2 === 0) {
-            console.log(`The current number is ${i} and it is even!`)
+            array.push(`The current number is ${i} and it is even!`);
         } else {
-            console.log(`The current number is ${i} and it is odd!`)
+            array.push(`The current number is ${i} and it is odd!`);
         }
     }
+    return array;
 }
-easyPrint()
+console.log(easyPrint().join('\n'));
 
 /**
  * 03 Medium - Check Grades
@@ -59,10 +60,15 @@ function checkGrades() {
     let grades = 0;
     let wholeClass = ["David 80", "Vinoth 77", "Divya 88", "Ishitha 95", "Thomas 68"];
     for (let i = 0; i < wholeClass.length; i++) {
+        // "David 80"
         let element = wholeClass[i];
+        // "['David', '80']"
+        // 0 1
         let nameAndGrade = element.split(' ');
+        // 600
         grades += parseInt(nameAndGrade[1]);
     }
+    // 400 / 5 = 80
     let average = grades / wholeClass.length;
     console.log(`Exercise 3:`)
     switch (true) {
@@ -88,7 +94,7 @@ checkGrades()
  * 04 Easy - medium - Sum multiples of 3 and 5
  * Write a function to sum the multiples of 3 and 5 under 1000.
  */
-function sumMultiple3and5() {
+let sumMultiple3and5 = () => {
     let sum = 0;
     for (let i = 0; i < 1000; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
@@ -106,7 +112,7 @@ sumMultiple3and5()
  * ("Bastian", "n") should return true
  * ("Open sesame", "same") should return true
  */
-function endingOfString(input, checker) {
+let endingOfString = (input, checker) => {
     let lengthChecker = checker.length;
     let partToCheck = input.slice(input.length - lengthChecker);
     console.log(`Exercise 5:`)
