@@ -1,4 +1,6 @@
 function squareArea(A) {
-    return ((A * Math.PI) / 4).toFixed(2);
+    let radius = (A * 4) / (2 * Math.PI)
+    let areaSquare = Math.pow(radius, 2).toFixed(2);
+    return parseFloat(areaSquare)
 }
 console.log(squareArea(2))
