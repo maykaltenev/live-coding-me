@@ -138,11 +138,8 @@ function getRandomPerson(people) {
   return luckyWinner[0];
 }
 
-let luckyWinner1 = getRandomPerson(peopleRejected); 
-let luckyWinner2 = getRandomPerson(peopleRejected); 
-let luckyWinner3 = getRandomPerson(peopleRejected); 
+let luckyWinner1 = getRandomPerson(peopleRejected);
+let luckyWinner2 = getRandomPerson(peopleRejected);
+let luckyWinner3 = getRandomPerson(peopleRejected);
 
 console.log(luckyWinner1, luckyWinner2, luckyWinner3);
-
-
-console.log(2);
