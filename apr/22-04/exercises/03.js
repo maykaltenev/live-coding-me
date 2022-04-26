@@ -104,7 +104,7 @@ function totalValue(objProducts, objectCarts, user) {
         }
     }
     for (let j = 0; j < objProducts.length; j++) {
-        console.log(objProducts[j]) // blue shirt
+        // console.log(objProducts[j]) // blue shirt
         for (let i = 0; i < resultCarts.length; i += 2) {
             if (objProducts[j].name.toLowerCase() === resultCarts[i].toLowerCase()) {
                 resultCarts[i + 1] *= objProducts[j].price;
@@ -113,4 +113,5 @@ function totalValue(objProducts, objectCarts, user) {
     }
     return resultCarts;
 }
-console.log(totalValue(products, carts, 'alkis'))
+// console.log(totalValue(products, carts, 'alkis'))
+console.log(totalValue(products, carts, 'john'))
