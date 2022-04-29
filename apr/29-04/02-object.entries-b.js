@@ -55,15 +55,15 @@ const recipe = {
 }
 function getIngredients(object) {
     const localRecipe = Object.entries(object)
-    const ingredients = [] // to store the ingredients
+    const measures = [] // to store the ingredients
 
     for (let i = 0; i < localRecipe.length; i++) {
         const key = localRecipe[i][0];
         const value = localRecipe[i][1];
-        if (key.includes('strIngredient') && value) {
-            ingredients.push(value)
+        if (key.includes('strMeasure') && value) {
+            measures.push(value)
         }
     }
-    console.log('localrecipe is', ingredients)
+    return ('localrecipe is', measures)
 }
-getIngredients(recipe)
+console.log(getIngredients(recipe))

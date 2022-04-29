@@ -55,15 +55,25 @@ const recipe = {
 }
 function getIngredients(object) {
     const localRecipe = Object.entries(object)
-    const ingredients = [] // to store the ingredients
-
+    const ingredients = [];
+    const measures = [] // to store the ingredients
+    const all = [];
+    let result = [];
     for (let i = 0; i < localRecipe.length; i++) {
         const key = localRecipe[i][0];
         const value = localRecipe[i][1];
-        if (key.includes('strIngredient') && value) {
+        if (key.includes('strMeasure') && value) {
+            measures.push(value)
+        } else if (key.includes('strIngredient') && value) {
             ingredients.push(value)
         }
     }
-    console.log('localrecipe is', ingredients)
+    for (let i = 0; i < measures.length; i++) {
+        all.push([ingredients[i], measures[i]]);
+    }
+    for (let i = 0; i < all.length; i++) {
+        result.push(`${all[i][0]} - ${all[i][1]}`);
+    }
+    return result;
 }
-getIngredients(recipe)
+console.log(getIngredients(recipe))
