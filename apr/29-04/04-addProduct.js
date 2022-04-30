@@ -74,7 +74,7 @@ const users = [
 const wishlist = [
     {
         userid: 1,
-        products: [1, 2, 3],
+        productId: [1, 2, 3],
     },
     {
         userid: 2,
@@ -89,7 +89,20 @@ const wishlist = [
 
 function addProductToWishList(objProducts, objUsers, objWishlist) {
 
-    let arrayOfProducts = Object.entries(objProducts);
-    let arrayOfUsers = Object.entries(objUsers);
-    let arrayWishlist = Object.entries(objWishlist);
+    let arrayOfProducts = Object.entries(objProducts)
+    let arrayOfUsers = Object.entries(objUsers)
+    let arrayWishlist = Object.entries(objWishlist)
+
+    for (const items of arrayWishlist) {
+        for (let i = 0; i < items.length; i++) {
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+
+            }
+
+        }
+    }
 }
+// console.log(items);
+
+console.log(addProductToWishList(products, users, wishlist))
