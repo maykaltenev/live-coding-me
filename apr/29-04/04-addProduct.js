@@ -87,22 +87,46 @@ const wishlist = [
 ];
 
 
-function addProductToWishList(objProducts, objUsers, objWishlist) {
+function updateWishlist(userid, productId) {
 
-    let arrayOfProducts = Object.entries(objProducts)
-    let arrayOfUsers = Object.entries(objUsers)
-    let arrayWishlist = Object.entries(objWishlist)
+    // 1. find the user in wishlist array
+    let wishIdx = -1; // index of the wishlist array that the user will be found (if will be found)
+    for (let i = 0; i < wishlist.length; i++) {
+        if (wishlist[i].userid === userid) {
+            wishIdx = i;
+            break;
+        }
+    }
+    // 2. check if user was found in the wishlist array
+    if (wishIdx === -1) { // user was not found
+        console.log('user not found')
+        wishlist.push({ userid: userid })
+        wishlist[wishlist.length - 1].products = [];
+        wishlist[wishlist.length - 1].products.push(productId)
+        return; // exit no more actions need to be taken
+    }
+    // 3. check if the user has the given product into his array (products)
+    if (!wishlist[wishIdx].products.includes(productId)) {
+        console.log('product not found')
+        wishlist[wishIdx].products.push(productId)
+        return;
+    }
+    // 4. find the index of the product in order to remove it
+    for (let i = 0; i < wishlist[wishIdx].products.length; i++) {
+        if (wishlist[wishIdx].products[i] === productId) {
+            wishlist[wishIdx].products.splice(i, 1);
 
-    for (const items of arrayWishlist) {
-        for (let i = 0; i < items.length; i++) {
-            for (let index = 0; index < array.length; index++) {
-                const element = array[index];
-
-            }
-
+            break;
         }
     }
 }
-// console.log(items);
 
-console.log(addProductToWishList(products, users, wishlist))
+updateWishlist(3, 2)
+updateWishlist(4, 1)
+updateWishlist(3, 5)
+console.log('wishlist is', wishlist)
+
+function getWishlistforUser() {
+
+}
+
