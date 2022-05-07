@@ -22,7 +22,7 @@
  * e.g. getTotalCost('alkis')
  */
 
- const products = [
+const products = [
     { // 1
         name: "Blue Shirt",
         price: 10
@@ -135,10 +135,10 @@ const carts = [
  */
 
 const blogPosts = [
-{
-    id: 1,
-    title: 'The AI in military',
-    text: `And when the time he was in front of the army were cut short.
+    {
+        id: 1,
+        title: 'The AI in military',
+        text: `And when the time he was in front of the army were cut short.
 
     The horse would have been trampled to pieces,
     
@@ -159,22 +159,42 @@ const blogPosts = [
     And there will be a thousand thousand more people to be massacred.
     
     Now let us go and lay hands on theirs.`,
-    author: 'deepai.org',
-    description: 'text generated from a machine in deepai.org',
-    comments: ['Awesome posts, thanks!', 'Cannot agree more']
-},
-{
-    id: 2, 
-    title: 'A garden in Babylon',
-    text: `As a result, the first of the ten disciples of Samaria, 
+        author: 'deepai.org',
+        description: 'text generated from a machine in deepai.org',
+        comments: ['Awesome posts, thanks!', 'Cannot agree more']
+    },
+    {
+        id: 2,
+        title: 'A garden in Babylon',
+        text: `As a result, the first of the ten disciples of Samaria, 
     called the "Tray-Bearer of Wisdom," was known by her as the 
     "Empire of the Tungis." 
     The Tungis are the divine spirits of the Dead and of the Prophets. 
     She taught these beings that in every person who does not know any of them,
         all they can do is to look for a spirit that has been placed at the root 
         of any man's estate. She even stated this to the Prophet Joseph.`,
-    author: 'deepai.org',
-    description: 'text generated from a machine in deepai.org',
-    comments: ['Amazed wow!', 'I dislike that']
-}
+        author: 'deepai.org',
+        description: 'text generated from a machine in deepai.org',
+        comments: ['Amazed wow!', 'I dislike that']
+    }
 ]
+
+// function searchBlog(array, input) {
+//     let result = array.filter(obj => Object.values(obj).some(i => i.includes(input)))
+//     return result
+// }
+
+
+// console.log(searchBlog(blogPosts, 'deepai'))
+
+function search(searchText) {
+    let arrayOfMatchedObjects = blogPosts.filter(object => {
+        return JSON.stringify(object)
+            .toString()
+            .toLowerCase()
+            .includes(searchText);
+    });
+    return arrayOfMatchedObjects;
+
+}
+console.log(search('text'))
