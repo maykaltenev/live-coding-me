@@ -123,10 +123,10 @@ listProductsForUser('alkis', carts)
 function getTotalItemsForUser(user, array) {
 
     total = array
-    .filter(item => item.user === user)
-    .reduce((total, item) => total + item.quantity, 0)
+        .filter(item => item.user === user)
+        .reduce((total, item) => total + item.quantity, 0)
 
-console.log('Total items for user', user, ' is ', total );
+    console.log('Total items for user', user, ' is ', total);
 }
 console.log('------------02B--------------')
 getTotalItemsForUser('alkis', carts)
@@ -136,22 +136,22 @@ function getTotalCartForUser(user, cartArray, productArray) {
 
     //{quantity, name}
     const userItems = cartArray.filter(item => item.user === user)
-    
+
     const itemsWithPrices = userItems.map(item => {
 
         // console.log("Item=", item)
-        const product = productArray.filter(prod => prod.name === item.product )
+        const product = productArray.filter(prod => prod.name === item.product)
         // console.log("quantity=", item.quantity);
         // console.log("product=", product);
 
-        return price = item.quantity *  product[0].price; 
+        return price = item.quantity * product[0].price;
         // return item.quantity *  product.price //productArray.filter(product => product.product === item.name).price
         // console.log("Price is", price)
     })
 
     console.log(itemsWithPrices)
 
-    const total = itemsWithPrices.reduce((total, item ) => total + item)
+    const total = itemsWithPrices.reduce((total, item) => total + item)
 
     console.log("Total for the cart =", total)
     // console.log("quantity is ", typeof cartArray[0].quantity, " and price is ", typeof productArray[0].price)
@@ -192,7 +192,7 @@ const blogPosts = [
         comments: ['Awesome posts, thanks!', 'Cannot agree more']
     },
     {
-        id: 2, 
+        id: 2,
         title: 'A garden in Babylon',
         text: `As a result, the first of the ten disciples of Samaria, 
         called the "Tray-Bearer of Wisdom," was known by her as the 
@@ -209,34 +209,30 @@ const blogPosts = [
 // a) Create a function that will search for a given text 
 function searchText(array, text) {
     const results = [];
-  
+
     array.forEach((item) => {
-      if (
-        item.title.includes(text) ||
-        item.text.includes(text) ||
-        item.description.includes(text)
-      )
-        results.push(item);
+        if (
+            item.title.includes(text) ||
+            item.text.includes(text) ||
+            item.description.includes(text)
+        )
+            results.push(item);
     });
-  
+
     return results.length ? results : "No matching posts found";
-  }
-  console.log('------------03A--------------')
-  console.log(searchText(blogPosts, "pieces"));
-  console.log(searchText(blogPosts, "not in a million"));
+}
+console.log('------------03A--------------')
+console.log(searchText(blogPosts, "pieces"));
+console.log(searchText(blogPosts, "not in a million"));
 
 //   b) Create a function that edits a given post
 function editPost(array, postId, field, value) {
     let idx = -1;
-
     array.forEach((item, index) => {
         if (item.id === postId) idx = index;
     });
-
     if (idx < 0) return "Post not Found";
-
     array[idx][field] = value;
-
     return array[idx];
 }
 console.log('------------03B--------------')
@@ -247,37 +243,37 @@ console.log(editPost(blogPosts, 3, "author", "alkas"));
 // c) create a function that deletes a post with a given id
 function deletePost(array, postId) {
     let idx = -1;
-  
+
     array.forEach((item, index) => {
-      if (item.id === postId) idx = index;
+        if (item.id === postId) idx = index;
     });
-  
+
     return idx > -1 ? array.splice(idx, 1) : array;
-  }
-  console.log('------------03C--------------')
-  console.log(deletePost(blogPosts, 33));
-  console.log(deletePost(blogPosts, 2));
+}
+console.log('------------03C--------------')
+console.log(deletePost(blogPosts, 33));
+console.log(deletePost(blogPosts, 2));
 
 //   d) create a function that displays the comments
 
 function displayComments(array, postId) {
     let idx = -1;
-  
+
     array.forEach((item, index) => {
-      if (item.id === postId) idx = index;
+        if (item.id === postId) idx = index;
     });
-  
+
     array[idx].comments.forEach((comment) => console.log(comment));
-  }
-  console.log('------------03D--------------')
-  displayComments(blogPosts, 1);
+}
+console.log('------------03D--------------')
+displayComments(blogPosts, 1);
 
 
 // Bonus: How to Create Chained functions (there is no such exercise given. It's just for demonstration purposes)
 const math = {
     result: 0,
     add(a, b) {
-        
+
         this.result = a + b
         return this
     },
