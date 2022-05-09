@@ -143,8 +143,6 @@ function getTotalCost(user) {
         }
         return a;
     }, 0)
-
-
 }
 console.log(carts)
 console.log(getTotalCost('maik'))

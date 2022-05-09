@@ -186,15 +186,29 @@ const blogPosts = [
 
 
 // console.log(searchBlog(blogPosts, 'deepai'))
-
-function search(searchText) {
-    let arrayOfMatchedObjects = blogPosts.filter(object => {
-        return JSON.stringify(object)
-            .toString()
-            .toLowerCase()
-            .includes(searchText);
-    });
-    return arrayOfMatchedObjects;
-
+// function search(searchText) {
+//     let arrayOfMatchedObjects = blogPosts.filter(object => {
+//         return JSON.stringify(object)
+//             .toString()
+//             .toLowerCase()
+//             .includes(searchText);
+//     });
+//     return arrayOfMatchedObjects;
+// }
+// console.log(search('text'))
+function search(input) {
+    let keys = [];
+    let values = [];
+    for (const item of blogPosts) {
+        keys = Object.keys(item);
+        values = Object.values(item);
+    }
+    blogPosts.reduce((a, c) => {
+        for (const key of keys) {
+            if (c[key] === 'object') {
+            }
+        }
+        return a;
+    }, [])
 }
-console.log(search('text'))
+console.log(search('deepai'))
