@@ -50,40 +50,60 @@ const blogPosts = [
     }
 ]
 
-// function search(searchText) {
-//     let arrayOfMatchedObjects = blogPosts.filter(object => {
-//         return JSON.stringify(object)
-//             .toString()
-//             .toLowerCase()
-//             .includes(searchText);
-//     });
-//     return arrayOfMatchedObjects;
-// }
-// console.log(search('pieces'));
-// console.log('-----------')
+// // function search(searchText) {
+// //     let arrayOfMatchedObjects = blogPosts.filter(object => {
+// //         return JSON.stringify(object)
+// //             .toString()
+// //             .toLowerCase()
+// //             .includes(searchText);
+// //     });
+// //     return arrayOfMatchedObjects;
+// // }
+// // console.log(search('pieces'));
+// // console.log('-----------')
 
-// console.log(searchBlog(blogPosts, 'pieces'))
-// function searchText(array, text) {
-//     const results = [];
-//     array.map((item) => {
-//         if (item.title.includes(text) ||
-//             item.text.includes(text) ||
-//             item.description.includes(text)) {
-//             results.push(item);
+// // console.log(searchBlog(blogPosts, 'pieces'))
+// // function searchText(array, text) {
+// //     const results = [];
+// //     array.map((item) => {
+// //         if (item.title.includes(text) ||
+// //             item.text.includes(text) ||
+// //             item.description.includes(text)) {
+// //             results.push(item);
+// //         }
+// //     });
+
+// //     return results.length ? results : "No matching posts found";
+// // }
+// // console.log('------------03A--------------')
+// // console.log(searchText(blogPosts, "pieces"));
+
+// // * b) Create a function that edits a given post. The user should be able to edit 
+// // * any object property he would like and should return the updated object
+// // * If the post is not found then the function should return 'Post not found'
+
+
+// function editPost(array, postId, field, value) {
+//     let idx = -1;
+//     array.map((item, index) => {
+//         if (item.id === postId) {
+//             idx = index;
 //         }
 //     });
-
-//     return results.length ? results : "No matching posts found";
+//     if (idx < 0) {
+//         return 'Post not found'
+//     }
+//     array[idx][field] = value;
+//     return array[idx];
 // }
-// console.log('------------03A--------------')
-// console.log(searchText(blogPosts, "pieces"));
 
-// * b) Create a function that edits a given post. The user should be able to edit 
-// * any object property he would like and should return the updated object
-// * If the post is not found then the function should return 'Post not found'
+// console.log(editPost(blogPosts, 2, 'title', 'Top Gear'));
+// console.log(editPost(blogPosts, 1, 'text', 'Super Film'));
 
+// * c) create a function that deletes a post with a given id from the array 
+//  * and returns the updated array
 
-function editPost(array, postId, field, value) {
+function deletePost(array, postId) {
     let idx = -1;
     array.map((item, index) => {
         if (item.id === postId) {
@@ -93,9 +113,23 @@ function editPost(array, postId, field, value) {
     if (idx < 0) {
         return 'Post not found'
     }
-    array[idx][field] = value;
-    return array[idx];
+    array.splice(idx, 1);
+    return array;
 }
+console.log(deletePost(blogPosts, 5))
 
-console.log(editPost(blogPosts, 2, 'title', 'Top Gear'));
-console.log(editPost(blogPosts, 1, 'text', 'Super Film'));
+// * d) create a function that displays the comments of a given post one per row */
+
+function displayPost(array, postId) {
+    let idx = -1;
+    array.map((item, index) => {
+        if (item.id === postId) {
+            idx = index;
+        }
+    });
+    if (idx < 0) {
+        return 'Post not found'
+    }
+    return array[idx].comments.join('\n');
+}
+console.log(displayPost(blogPosts, 2))
