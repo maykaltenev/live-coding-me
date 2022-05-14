@@ -119,6 +119,16 @@ console.log(chicko.sleep())
  * Booklists and Books might need more methods than that. 
  * Try to think of more that might be useful.
  */
+class Book {
+    constructor(title, genre, author, read, readDate) {
+        this.title = title;
+        this.genre = genre;
+        this.author = author;
+        this.read = read;
+        this.readDate = new Date(readDate);
+    }
+}
+
 class BookList {
     constructor(markedAsRead, notReadYet, nextBook, currentBook, lastBook) {
         this.markedAsRead = markedAsRead;
@@ -128,20 +138,33 @@ class BookList {
         this.lastBook = lastBook;
         this.allBooks = [];
     }
-}
-class Book {
-    constructor(title, genre, author, read, readDate) {
-        this.title = title;
-        this.genre = genre;
-        this.author = author;
-        this.read = read;
-        this.readDate = new Date(readDate);
-
+    add(...book) {
+        this.allBooks.push(...book);
+    }
+    finishCurrentBook(book) {
+        this.markedAsRead++;
+        this.lastBook = book;
+        this.lastBook.read = true;
+        this.allBooks.push(book);
+        this.allBooks.push(book.lastBook);
+        book.currentBook = this.nextBook;
+        book.currentBook.readDate = Date.now()
+        // book.nextBook.read = false;
+        this.notReadYet++;
     }
 }
 let harryPotter = new Book('Philosopher Stone', 'fantasy', 'J.K.Rowling', true, '2005, 6, 5');
-console.log(harryPotter);
+// console.log(harryPotter);
 let lordOfTheRings = new Book('Two Towers', 'fantasy', ' J. R. R. Tolkien.', true, '2008, 12, 4');
-console.log(lordOfTheRings)
+// console.log(lordOfTheRings)
 let hungerGames = new Book('The Hunger Games', 'fantasy', 'Suzanne Collins', false, '2011,4,2');
-console.log(hungerGames)
+// console.log(hungerGames)
+let donKihot = new Book('Don Kihot', 'novel', 'Miguel de Cervantes', false, '2000,3,14');
+let firstList = new BookList(0, 0, 'nextBook', 'currentBook', 'lastBook');
+// firstList.add(harryPotter, lordOfTheRings);
+firstList.currentBook = lordOfTheRings;
+firstList.lastBook = harryPotter;
+firstList.nextBook = donKihot;
+
+firstList.finishCurrentBook(hungerGames);
+console.log(firstList);
