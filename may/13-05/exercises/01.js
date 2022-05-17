@@ -125,7 +125,7 @@ class Book {
         this.genre = genre;
         this.author = author;
         this.read = read;
-        this.readDate = new Date(readDate);
+        this.readDate = new Datce(readDate);
     }
 }
 
