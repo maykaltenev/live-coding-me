@@ -47,7 +47,6 @@ class Cart {
       console.log(`${productName} was not in the cart`);
       return this.items;
     }
-
     if (productInCart.quantity === 0) {
       this.items = this.items.filter((item) => item.quantity > 0);
     }
