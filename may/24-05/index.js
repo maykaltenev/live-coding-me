@@ -75,7 +75,6 @@ function playAgain() {
 }
 
 // 6th function checks for repetitive numbers in users input if it's true it will ask  again for valid number
-
 // also it will check if the length of the secret number is the same as from the user if not it will ask again for the valid number
 function validGuess(guess, randomNumberNoRepeat) {
     let noRepeatInputCheck = guess.split("").sort((a, b) => a - b);
