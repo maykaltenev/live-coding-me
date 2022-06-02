@@ -35,11 +35,8 @@ const addToList = (e) => {
     newLi.appendChild(doneBtn);
     newLi.appendChild(delBtn);
     ul.appendChild(newLi);
-<<<<<<< HEAD
-=======
     delBtn.addEventListener("click", () => newLi.remove());
     doneBtn.addEventListener("click", () => newLi.classList.add("done"));
->>>>>>> 29a3b8574265c81638088c99cbbde21e71696b91
     document.querySelector("#user-data").value = "";
   } else {
     document.querySelector("#user-data").placeholder =
