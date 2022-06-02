@@ -29,7 +29,6 @@ const addToList = (e) => {
     newLi.appendChild(text);
     newLi.style.backgroundColor = colorGen();
     ul.appendChild(newLi);
-
     document.querySelector("#user-data").value = "";
   } else {
     document.querySelector("#user-data").placeholder =
