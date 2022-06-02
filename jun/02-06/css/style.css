@@ -1,6 +1,7 @@
 ul li {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   width: 25rem;
 }
 ul li button {
@@ -8,6 +9,27 @@ ul li button {
 .done {
   color: lightgreen;
   text-decoration: line-through;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+=======
+  width: 50%;
+}
+ul li button {
+  justify-self: end;
+}
+ul li:nth-child(2n) {
+  background-color: orange;
+>>>>>>> 29a3b8574265c81638088c99cbbde21e71696b91
+}
+.done {
+  color: lightgreen;
+  text-decoration: line-through;
+}
+.not-done {
+  color: black;
+  text-decoration: none;
 }
 button {
   border: 0 none;
