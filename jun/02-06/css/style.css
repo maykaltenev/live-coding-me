@@ -1,0 +1,15 @@
+ul li {
+  display: flex;
+  flex-direction: row;
+  width: 25rem;
+}
+ul li button {
+}
+.done {
+  color: lightgreen;
+  text-decoration: line-through;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+}
