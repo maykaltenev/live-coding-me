@@ -34,70 +34,76 @@ const quizData = [
 ];
 
 const questionText = document.getElementById('question')
-console.log('questionText is', questionText)
-const a1 = document.getElementById('a_text')
 
-const answers = document.querySelectorAll('.answer')
+const a1 = document.getElementById('a_text');
+const b1 = document.getElementById('b_text');
+const c1 = document.getElementById('c_text');
+const d1 = document.getElementById('d_text');
+const quiz = document.getElementById('quiz');
+const answers = document.querySelectorAll('.answer');
 
-console.log('answers is', answers)
 
 const button = document.getElementById('submit')
 
 // button.addEventListener('click', () => console.log('im clicked'))
-
 let index = 0; // index to be used for array quiz data
+let correct = 0;
 
-loadData(0) // load for the first time questions and answers
-
+loadData() // load for the first time questions and answers
+// Loads question text and answers text
+function loadData() {
+    questionText.innerText = quizData[index].question;
+    a1.innerText = quizData[index].a;
+    b1.innerText = quizData[index].b;
+    c1.innerText = quizData[index].c;
+    d1.innerText = quizData[index].d;
+}
 function deselect() {
     answers.forEach(item =>
-            item.checked = 0
-        )
+        item.checked = 0
+    )
 }
 
-function checkAnswer() {
-
+function checkAnswer(quizData) {
+    const inputAnswer = whatTheUserAnswered();
+    console.log('check', inputAnswer);
+    console.log(quizData[index].correct)
+    if (inputAnswer === quizData[index].correct) {
+        console.log('update',);
+        correct++
+    }
 }
 
 button.onclick = () => {
-
     if (!answers[0].checked &&
         !answers[1].checked &&
         !answers[2].checked &&
-        !answers[3].checked 
-        ) return alert('Yo, choose one')
+        !answers[3].checked
+    ) return alert('Yo, choose one')
 
     index++;
     console.log('onclick: index=', index)
 
     if (index < quizData.length) {
-
-        const answer = whatTheUserAnswered()
-
-        console.log('Answered: ', answer)
+        checkAnswer(quizData)
         loadData(index)
         deselect()
+    } else {
+        quiz.innerHTML = `
+                <h2>You answered ${correct}/${quizData.length} questions correctly</h2>
+                <button onclick="location.reload()">Reload</button> `
+
     }
 }
 
 function whatTheUserAnswered() {
-
     let answer = null
-
-    answers.forEach((item, idx) => {
-
-        console.log('what: checked', item.checked, ' id', item.id)
-        if (item.checked) return answer = item.id
+    answers.forEach((item) => {
+        if (item.checked) {
+            return answer = item.id
+        }
     })
-
     return answer
 }
 
-// Loads question text and answers text
-function loadData(alice) {
-
-    questionText.innerText = quizData[alice].question
-    
-    a1.innerText = quizData[alice].a
-}
 
