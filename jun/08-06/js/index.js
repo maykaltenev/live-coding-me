@@ -5,7 +5,7 @@ const whiteBg = () => {
   box.style.backgroundColor = "white";
 };
 const orangeBg = () => {
-  box.style.backgroundColor = "orange";
-};
+  box.style.backgroundColor = 'orange';
+}
 box.addEventListener("mouseenter", orangeBg);
 box.addEventListener("mouseleave", whiteBg);
