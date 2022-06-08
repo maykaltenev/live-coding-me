@@ -95,7 +95,6 @@ button.onclick = () => {
 
     }
 }
-
 function whatTheUserAnswered() {
     let answer = null
     answers.forEach((item) => {
