@@ -6,16 +6,11 @@ let tileMarked = -1;
 let mistakes = 3;
 
 function initialize() {
-
     setDefaultValues(true);
-
     // remove all tiles before creating new ones
     const tiles = document.querySelectorAll('.tile')
-
     tiles.forEach(tile => tile.remove())
-
     for (let i = 0; i < 10; i++) {
-
         const tile = document.createElement('div')
         tile.classList.add('tile')
         tile.textContent = randomNumber()
@@ -51,7 +46,7 @@ function handleTileCLick(event) {
             tile.classList.remove('marked')
             setDefaultValues()
         } else { // user clicked a different tile
-        
+
             if (tile.textContent == currentValue) { // user clicked the correct tile
                 removeTiles(tile.id, tileMarked)
                 setDefaultValues()
@@ -63,18 +58,18 @@ function handleTileCLick(event) {
                 }
             }
         }
-        
+
 
     } else { // first time a tile is clicked
         console.log('tilemarked', tileMarked, 'tileid', tile.id)
-       
+
         currentValue = event.target.textContent;
         tileMarked = event.target.id;
 
         // change background color
-        
+
         tile.classList.add('marked')
-        
+
     }
 
     if (!checkForMoreMoves()) setTimeout(() => lost(true), 100) // need to add some time to wait for the DOM to update
@@ -85,14 +80,14 @@ function handleTileCLick(event) {
 
 function removeTiles(a, b) {
     const tileA = document.getElementById(a);
-    
+
     const tileB = document.getElementById(b);
 
     tileA.remove();
     tileB.remove();
 }
 
-function setDefaultValues(newGame){
+function setDefaultValues(newGame) {
 
     currentValue = 0;
     tileMarked = -1;
@@ -107,24 +102,24 @@ function checkPlayerWon() {
 }
 
 function checkForMoreMoves() {
-    
+
     console.log('checkForMoreMoves here')
     const tiles = [...document.querySelectorAll('.tile')]
-    
+
     if (tiles.length < 2) return false;
-    
+
     const cleanedTiles = tiles.reduce((arr, tile) => {
 
         console.log('in reduce', tile.textContent)
         console.log('in reduce', arr)
 
-        if(!arr.includes(tile.textContent)){
+        if (!arr.includes(tile.textContent)) {
             arr.push(tile.textContent)
-            
+
         }
         return arr
     }
-    , [])
+        , [])
     console.log('tiles: cleaned/original', cleanedTiles.length, tiles.length)
 
     if (cleanedTiles.length < tiles.length) return true;
@@ -144,7 +139,7 @@ function lost(moves) {
 
     setDefaultValues(true)
     updateMistakes();
-    
+
     const footer = document.createElement('div')
     footer.classList.add('footer')
     const button = document.createElement('button')
@@ -159,7 +154,7 @@ function lost(moves) {
 }
 
 function updateMistakes() {
-    
+
     const score = document.querySelector('.score')
     score.textContent = 'Remaining mistakes: ' + mistakes;
 }
