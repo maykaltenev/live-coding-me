@@ -1,3 +1,8 @@
+// Start with libraries
+import { log } from "./table.js";
+
+import asdkn, { screws, x } from "./screws.js";
+
 // IIFE = Immediately Invoked Function Expression
 (function () {
   var userName = "Andrej";
@@ -10,3 +15,5 @@
     div.append(p);
   });
 })();
+
+log();
