@@ -1,16 +1,16 @@
-// console.log("First log");
+console.log("First log");
 
 // Try / Catch
-// function makeError() {
-//   try {
-//     const name = "Wolf";
-//     name = "NotWolf";
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
+function makeError() {
+  try {
+    const name = "Wolf";
+    name = "NotWolf";
+  } catch (err) {
+    console.error(err);
+  }
+}
 
-// console.log("Second log");
+console.log("Second log");
 
 // Example of throwing error
 function multiply(a, b) {
