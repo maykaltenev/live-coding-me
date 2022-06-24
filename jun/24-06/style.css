@@ -10,9 +10,13 @@
   font-family: sans-serif;
 }
 body {
-  background-color: blanchedalmond;
+  background-image: url(./background-kitchen.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: rgb(255, 255, 0);
 }
 main {
   display: flex;
@@ -26,10 +30,9 @@ main {
   margin-bottom: 2rem;
 }
 img {
-  width: 40rem;
-  height: 25rem;
+  width: 21rem;
   border-radius: 2rem;
-  border: 0.3rem solid rgb(255, 126, 126);
+  border: 0.3rem solid rgb(85, 19, 19);
 }
 
 #imagewrapper {
@@ -38,7 +41,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 #wrapper {
@@ -50,11 +53,24 @@ img {
   flex-direction: column;
 }
 
-#ingredients {
+#ingredients,
+#instructions {
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 65%;
+  text-align: justify;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 21rem;
+  border: 0.3rem solid rgb(85, 19, 19);
+  background-image: url(./wood2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#instructions {
+  width: 22rem;
+  line-height: 2rem;
 }
 #ingredients ul {
   list-style: none;
@@ -62,7 +78,8 @@ img {
   margin: 0;
   width: 100%;
   align-items: center;
-  border: 1px rgb(69, 38, 38) dashed;
+
+  /* border: 1px rgb(69, 38, 38) dashed; */
 }
 #ingredients ul li {
   font-size: 1.1;
@@ -72,9 +89,50 @@ img {
   padding: 0.5rem;
 }
 #ingredients ul li div {
-  border-bottom: 1px black dotted;
+  border-bottom: 5px rgb(250, 254, 7) dotted;
 }
+h2 {
+  margin-top: 2rem;
 
+  width: 80%;
+  background-color: rgb(154, 24, 24);
+
+  text-align: center;
+}
 h3 {
-  margin-bottom: 1rem;
+  width: 80%;
+  background-color: brown;
+  text-align: center;
+}
+h4 {
+  margin-bottom: 0.5rem;
+  background-color: brown;
+  width: 50%;
+  text-align: center;
+}
+@media screen and (min-width: 780px) {
+  h2 {
+    text-align: center;
+    width: 30%;
+  }
+  h3 {
+    text-align: center;
+    width: 15%;
+  }
+  h4 {
+    text-align: center;
+    width: 10%;
+  }
+
+  img {
+    width: 50rem;
+    height: 35rem;
+  }
+  #ingredients,
+  #instructions {
+    width: 35%;
+  }
+  iframe {
+    width: 580px;
+  }
 }
