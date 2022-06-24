@@ -37,7 +37,7 @@ async function getAllPosts() {
 async function getPostById(id) {
   // The fetch function will return the Response object
   const response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
+    `https://jsonplaceholder.typicode.composts/${id}`
   );
   // We will convert the Response.body into a javascript value
   const post = await response.json();
