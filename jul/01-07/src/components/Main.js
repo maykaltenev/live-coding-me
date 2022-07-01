@@ -1,9 +1,9 @@
 import React from 'react'
-import {data} from '../data'
+import { data } from '../data'
 
 const source = data[0].strYoutube
 
-export default function Header () {
+export default function Header() {
 
     let defaultColor = true;
 
@@ -12,17 +12,14 @@ export default function Header () {
         defaultColor = !defaultColor;
         console.log(`defaultColor is `, defaultColor)
     }
-
     const handleIngredient = item => {
-
         const recipe = Object.entries(item)
-
         const ingredients = []
-
         recipe.forEach(item => {
             if (item[0].includes('strIng') && item[1]) {
                 ingredients.push(item[1])
-            }} )
+            }
+        })
 
         return <div>
             {
@@ -32,16 +29,15 @@ export default function Header () {
     }
 
     return <div className="main">
-            { 
+        {
             data.map(item => <div className={defaultColor ? 'card' : 'cardChanged'} key={item.idMeal} onClick={() => handleClick(item.idMeal)}>
-
-                    {item.strMeal}
-                    <img className="image"src={item.strMealThumb} alt="meal"/>
-                    
-                    {handleIngredient(item)}
-                </div>)
-            }
-        </div>
+                {item.strMeal}
+                <img className="image" src={item.strMealThumb} alt="meal" />
+                <iframe src={`https://www.youtube.com/embed/${(item.strYoutube).slice(-11)}`}></iframe>
+                {handleIngredient(item)}
+            </div>)
+        }
+    </div>
 }
 
 /**
