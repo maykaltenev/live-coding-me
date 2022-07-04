@@ -1,12 +1,10 @@
 import React from 'react'
 import { data } from '../data'
 
-const source = data[0].strYoutube
+
 
 export default function Header() {
-
     let defaultColor = true;
-
     const handleClick = (idmeal) => {
         console.log(`Image ${idmeal} has been clicked`)
         defaultColor = !defaultColor;
@@ -20,7 +18,6 @@ export default function Header() {
                 ingredients.push(item[1])
             }
         })
-
         return <div>
             {
                 ingredients.map(item => <p>{item}</p>)
