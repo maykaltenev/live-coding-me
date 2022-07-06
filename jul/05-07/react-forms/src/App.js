@@ -18,7 +18,7 @@ function App() {
   // By using one handle change
   // we are able to dinamically change the correct value inside our
   // values object.
-  // To every inpuy we added a name
+  // To every input we added a name
   // We use the same keys inside our values object (userName, email, password)
   // When the user types in the input, we use the inputs name to overwrite only that key
   // inside our state, while preserving the rest of the state
