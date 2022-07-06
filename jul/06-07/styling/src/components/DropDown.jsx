@@ -1,14 +1,13 @@
 import React from "react";
 
 const style1 = {
-    position: 'absolute',
-    top: '100%',
-    textAlign: 'center',
-    opacity: '80%',
-    width: '100%',
-    padding: '20px'
-}
-
+  position: "absolute",
+  top: "100%",
+  textAlign: "center",
+  opacity: "80%",
+  width: "100%",
+  padding: "20px",
+};
 
 export default function DropDown(props) {
   return (
