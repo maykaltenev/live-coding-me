@@ -31,8 +31,7 @@ export default function Header() {
         Theme {toggleTheme ? <MdLightMode /> : <MdNightlight />}
       </div>
 
-     <DropDown />
-      
+      <DropDown />
     </div>
   );
 }
