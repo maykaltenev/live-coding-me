@@ -30,9 +30,7 @@ export default function Header() {
       >
         Theme {toggleTheme ? <MdLightMode /> : <MdNightlight />}
       </div>
-
       {/* {toggleMenu ? <DropDown /> : null}*/}
-
       {toggleMenu && <DropDown toggleTheme={toggleTheme} />}
     </div>
   );
