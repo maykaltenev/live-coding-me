@@ -1,6 +1,8 @@
 import React from "react";
-
-export default function Card({ count }) {
+import { useContext } from "react";
+import { Context } from "./context/countContext";
+export default function Card() {
+  const { count } = useContext(Context);
   return (
     <div style={{ border: "3px violet solid", height: "60px" }}>
       <h2>Card</h2>

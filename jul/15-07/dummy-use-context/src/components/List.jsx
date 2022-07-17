@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "./Card";
-export default function List({ count }) {
+export default function List() {
   return (
     <div style={{ border: "3px green solid", height: "90%" }}>
       Hello from List
-      <Card count={count} />
-      <Card count={count} />
-      <Card count={count} />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
