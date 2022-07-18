@@ -17,22 +17,18 @@ const DATA = [
 
 const Book = ({ item }) => {
   const { currency } = useContext(CurrencyContext);
-
   const price = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: currency?.code,
   }).format(item.price * currency.conversionRate);
-
   return (
     <li>
       {item.title} - {price}
     </li>
   );
 };
-
 const App = () => {
   const { setCurrency } = useContext(CurrencyContext);
-
   return (
     <div>
       <CurrencyButtons onChange={setCurrency} />
