@@ -1,4 +1,4 @@
-import React, { useContext,useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "./context/user";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
@@ -43,7 +43,7 @@ export default function Login() {
       <div>Password</div>
       <input type={showPassword ? "text" : "password"} name="password" placeholder="abc123456" />
       <span onClick={() => setShowPassword((prev) => !prev)}>
-        {showPassword ? <FaRegEye className="icon"/> : <FaRegEyeSlash className="icon"/>}
+        {showPassword ? <FaRegEye className="icon" /> : <FaRegEyeSlash className="icon" />}
       </span>
       <br />
       <button>Login</button>
