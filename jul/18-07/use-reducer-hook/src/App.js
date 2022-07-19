@@ -1,10 +1,8 @@
 import { useState, useReducer } from "react";
-
 const ACTIONS = {
   INCREMENT: "increment",
   CHANGE_EMAIL: "change-email",
 };
-
 // The reducer function accepts two parameters - the state and the action object
 // the state is passed by React, the action object is whatever we pass inside the dispatch function
 function reducer(state, action) {
@@ -23,7 +21,6 @@ function reducer(state, action) {
 
 function App() {
   const [count, setCount] = useState(0);
-
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
     name: "John",
