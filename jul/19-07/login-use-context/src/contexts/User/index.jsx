@@ -16,10 +16,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case ACTIONS.LOG_IN_SUCCESS:
       return { user: action.user };
-
     case ACTIONS.UPDATE_USERNAME:
       return { user: { ...state.user, username: action.username } };
-
     default:
       return state;
   }
