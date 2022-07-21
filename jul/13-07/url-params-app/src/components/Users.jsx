@@ -4,11 +4,11 @@ import {
   Link,
 } from "react-router-dom";
 
-import useFetch from "../UseFetch";
 
 export default function Users() {
   const [users, setUsers] = useState([]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // const navigate = useNavigate();
   const fetchUsers = () => {
@@ -26,12 +26,19 @@ export default function Users() {
   // };
  const [data]= useFetch("https://jsonplaceholder.typicode.com/users")
 >>>>>>> 5f437d38a684bd6f53f680e6605f145b41fb84da
+=======
+  // const navigate = useNavigate();
 
- 
+  const fetchUsers = () => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) => setUsers(data));
+  };
+>>>>>>> 35960f0f56faf774e50e4450c20910c3fe597ffd
+
   useEffect(() => {
-    //fetchUsers();
-    data && setUsers(data)
-  }, [data]);
+    fetchUsers();
+  }, []);
 
   return (
     <div>
