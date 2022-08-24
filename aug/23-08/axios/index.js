@@ -14,4 +14,4 @@ const getPosts = async () => {
 
 // getPosts()
 
-// console.log(process)
+console.log(process)
