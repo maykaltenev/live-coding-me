@@ -7,7 +7,7 @@ const app = express();
 app.listen(process.env.PORT, () =>
   console.log(`server is running on port (from .env) ${process.env.PORT}`)
 );
-
+app.use(express.json());
 // lowdb configuration=========================
 const adapter = new JSONFile("./db.json");
 const db = new Low(adapter);
@@ -28,4 +28,15 @@ app.get("/products", (req, res) => {
   res.send(db.data.products);
 });
 
+app.post('/signup', async (req, res) => {
+  console.log(req.body);
 
+  let newUser = req.body;
+
+  newUser.id = db.data.users.length + 1;
+  db.data.users.push(newUser);
+
+  await db.write();
+
+  res.send('user added successfully');
+})

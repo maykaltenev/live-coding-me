@@ -13,7 +13,6 @@ const addUser = async () => {
     username: "Doe",
     email: "john@doe",
   });
-
   console.log(res.data);
 };
 
