@@ -4,11 +4,11 @@ import express from "express"; // type: module
 
 const app = express();
 
-app.listen(8000, ()=> console.log("server is running on port 8000"));
+app.listen(8000, () => console.log("server is running on port 8000"));
 
 // endpoint 1: expects a request to the path (URI/URL): http://localhost:8000 and sends a response which is a json object {"name":"john"}
 app.get("/", (req, res) => {
-    // here comes data from database if needed
+  // here comes data from database if needed
   res.send({ "name": "John" });
 });
 
