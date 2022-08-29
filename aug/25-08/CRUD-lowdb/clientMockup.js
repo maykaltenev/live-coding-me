@@ -1,20 +1,22 @@
 import axios from "axios";
+import fetch from "node-fetch";
 
 // testing our endpoints that we made in server.js
 const getUsers = async () => {
-  const res = await axios.get("http://localhost:8080/users");
+  const { data } = await axios.get("http://localhost:8080/users");
 
-  console.log(res.data);
+  console.log(data);
 };
 
+
 const addUser = async () => {
-  const res = await axios.post("http://localhost:8080/signup", {
-    nam: "John",
+  const res = await axios.post("http://localhost:8080/users/signup", {
+    name: "John",
     username: "Doe",
-    email: "john@doe",
+    email: "john@doe"
   });
   console.log(res.data);
 };
 
 addUser();
-getUsers();
+//getUsers();
