@@ -1,7 +1,8 @@
 import express from "express";
 import "dotenv/config"; // require("dotenv").config();
-import { Low, JSONFile } from "lowdb";
+//import { Low, JSONFile } from "lowdb";
 import { userRouter } from "./routes/usersRoute.js"; // importing the userRouter that includes all the users endpoints
+import { productsRouter } from "./routes/productsRoute.js"; // importing the productsRouter that includes all the products' endpoints
 
 const app = express();
 
@@ -12,18 +13,21 @@ app.listen(process.env.PORT, () =>
 //!Important to be able to read the body of the request req.body
 app.use(express.json());
 
-// lowdb configuration=========================
-const adapter = new JSONFile("./db.json");
-const db = new Low(adapter);
+// // lowdb configuration=========================
+// const adapter = new JSONFile("./db.json");
+// const db = new Low(adapter);
 
-// Read data from JSON file, this will set db.data content
-await db.read();
+// // Read data from JSON file, this will set db.data content
+// await db.read();
 
-// console.log(db.data);
-//===============================================
+// // console.log(db.data);
+// //===============================================
 
 // users route
 app.use("/users", userRouter );
+
+// products route
+app.use("/products", productsRouter );
 
 
 //CRUD
