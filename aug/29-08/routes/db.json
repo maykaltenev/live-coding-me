@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "2",
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv"
-    },
-    {
       "id": "3",
       "name": "Clementine Bauch",
       "username": "Samantha",
@@ -16,6 +10,14 @@
       "username": "I know",
       "email": "blahblah@blah",
       "id": "86e5gf289d"
+    },
+    {
+      "id": "86e635daf3"
+    },
+    {
+      "title": "The Matrix",
+      "director": "Neo",
+      "id": "2"
     }
   ],
   "products": [

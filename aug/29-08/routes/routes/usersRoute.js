@@ -1,7 +1,6 @@
 import express from "express";
 import { Low, JSONFile } from "lowdb";
 
-
 export const userRouter = express.Router();
 
 
@@ -16,8 +15,8 @@ await db.read();
 //===============================================
 
 const uid = () => {
-    return Date.now().toString(18);
-  };
+  return Date.now().toString(18);
+};
 
 
 //CRUD
@@ -50,7 +49,7 @@ userRouter.post("/", async (req, res) => {
 });
 
 
-userRouter.delete( "/:id", async (req, res) => {
+userRouter.delete("/:id", async (req, res) => {
   //Delete
   const updatedUsersArr = db.data.users.filter(
     (user) => user.id !== req.params.id
@@ -64,24 +63,18 @@ userRouter.delete( "/:id", async (req, res) => {
 });
 
 
-userRouter.put( "/:id", async (req, res) => {
+userRouter.put("/:id", async (req, res) => {
   //Update
-
   console.log(req.body);
-
   let updatedUsersArr = db.data.users.filter(
     (user) => user.id !== req.params.id
   );
-
   let updatedUser = req.body;
   updatedUser.id = req.params.id;
 
   updatedUsersArr.push(updatedUser);
-
   db.data.users = updatedUsersArr;
-
   await db.write();
-
   res.send(db.data.users);
 });
 
