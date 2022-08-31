@@ -10,7 +10,7 @@ app.get("/", (req, res, next) => {
     // try {
     //     throw myErr;
     // } catch (e) { // e=myErr
-        next(myErr); // Whenever we run next() and pass it an error, we skip all other middleware and go to the error handling middleware
+    next(myErr); // Whenever we run next() and pass it an error, we skip all other middleware and go to the error handling middleware
     // }
 })
 
@@ -29,7 +29,7 @@ app.get("/404", (req, res) => {
 app.use((error, req, res, next) => {
     console.log("we are inside the error handling middleware");
     console.log(error);
-    if(error.type === "notfound") {
+    if (error.type === "notfound") {
         res.redirect("/404");
     }
 })

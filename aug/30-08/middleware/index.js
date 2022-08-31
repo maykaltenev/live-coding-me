@@ -33,6 +33,6 @@ app.get("/api", (req, res, next) => {
     console.log("we are on the api path");
 })
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log("app is listening on port 3000");
 })
