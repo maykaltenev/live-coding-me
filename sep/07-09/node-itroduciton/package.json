@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.2"
+  },
+  "type": "module",
+  "scripts": {
+    "new": "export SECRET_API_KEY = dsfdfsfsfdsfsfdsfdsf && export URL = http://localhost && export DB_NAME = db",
+    "dev": "export MODE=DEVELOPMENT && node index.js",
+    "test": "export MODE=TEST && node index.js",
+    "prod": "export MODE=PRODUCTION && node index.js"
+  }
+}
