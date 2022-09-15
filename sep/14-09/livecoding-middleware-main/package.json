@@ -1,12 +1,13 @@
 {
-  "name": "14-09",
+  "name": "middleware-example",
   "version": "1.0.0",
-  "description": "## Lesson Plan",
+  "description": "This project is about middleware",
   "main": "index.js",
-  "type": "module",
+  "type":"module",
   "scripts": {
-    "dev": "nodemon server",
-    "start": "node server"
+    "dev":"nodemon server",
+    "start":"node server", 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
