@@ -1,21 +1,24 @@
-import mongoose from "mongoose";
+import express from "express";
+import { User } from "../models/user.js";
 
-// schema
-const userSchema = new mongoose.Schema({
-    username: String, // JavaScript uses lowercase "string"
-    email: String,
-    password: String, // not a good practise!
-    age: Number,
-    firstname: String,
-    lastname: String,
-    height: Number,
-    country: String,
+const router = express.Router();
+
+router.get("/", async (req, res) => {
+    // store data
+    User.create({
+        username: "whitewhale",
+        email: "whitewhale@ocean.org",
+        password: "121321",
+        age: 59,
+        firstname: "Moby2",
+        lastname: "Dick2",
+        height: 888,
+        country: "None",
+    });
+
+    // querying data
+    const users = await User.find({ height: 888 });
+    res.send(users);
 });
 
-// model
-// the string "user_collection" is used internally by mongoose / mongodb to reference the collection
-// it is also the name used when creating the collection
-
-const User = mongoose.model("user_collection", userSchema);
-
-export { User };
+export { router };

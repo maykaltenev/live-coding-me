@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import { User } from "../models/user.js"
+
 // schema
-const user = mongoose.User({
-    username: "whale", // JavaScript uses lowercase "string"
-    email: "whale@sea.org",
+const userSchema = new mongoose.Schema({
+    username: String, // JavaScript uses lowercase "string"
+    email: String,
     password: String, // not a good practise!
     age: Number,
     firstname: String,
@@ -13,6 +13,9 @@ const user = mongoose.User({
 });
 
 // model
+// the string "user_collection" is used internally by mongoose / mongodb to reference the collection
+// it is also the name used when creating the collection
 
+const User = mongoose.model("user_collection", userSchema);
 
 export { User };
