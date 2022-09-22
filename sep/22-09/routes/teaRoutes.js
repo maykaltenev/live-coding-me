@@ -55,7 +55,6 @@ router.get('/byname/multiple/:name', async (req, res) => {
 //BODY: 
 
 router.post('/create', async (req, res) => {
-
     try {
         const createdTea = await Tea.create({
             name: req.body.name,
@@ -119,9 +118,7 @@ router.delete('/delete/category/:category', async (req, res) => {
     try {
 
         const resDeleteTea = await Tea.deleteMany({ category: req.params.category });
-
         console.log("resDeleteTea", resDeleteTea)
-
         //send back the tea has been deleted
         return res.status(200).json({ message: `Message:${resDeleteTea.deletedCount} teas were deleted.` });
 
