@@ -7,8 +7,7 @@ router.get('/', async (req, res) => {
     //selecting specific fields of our Hotel using .select()
     const hotels = await Hotel.find().select('name description');
     return res.status(200).json(hotels);
-})
-
+});
 //GET: show the room by ID 
 router.get('/rooms/byid/:id', async (req, res) => {
     //find the room with that id inside the array.
@@ -23,7 +22,6 @@ router.get('/rooms/byid/:id', async (req, res) => {
 });
 
 router.post('/create', async (req, res) => {
-
     try {
         const createdHotel = await Hotel.create({
             name: req.body.name,
@@ -32,14 +30,11 @@ router.post('/create', async (req, res) => {
             isAvailable: req.body.isAvailable,
             stars: req.body.stars
         })
-
         return res.status(200).json({ message: 'Hotel created', createdHotel })
-
     } catch (error) {
         return res.status(500).json({ message: error.message })
     }
 });
-
 //patch update the current hotel and add a room 
 router.patch('/create-room/:id', async (req, res) => {
     try {
