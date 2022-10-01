@@ -77,7 +77,6 @@ router.post("/create", async (req, res) => {
       price: req.body.price,
       origin: req.body.origin,
     });
-
     return res.status(200).json({ message: "Tea created", createdTea });
   } catch (error) {
     //if there's an error
