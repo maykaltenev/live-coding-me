@@ -47,7 +47,7 @@ export const sanitizeUser = [
     (req, res, next) => {
         req.body.firstname = capitalizeFirstLetter(req.body.firstname);
         req.body.lastname = capitalizeFirstLetter(req.body.lastname);
-        c
+
         next();
     }
 ]

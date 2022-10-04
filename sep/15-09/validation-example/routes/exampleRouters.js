@@ -9,9 +9,7 @@ router.get('/', (req, res) => {
 });
 router.post('/validateuser', body('email').isEmail(), (req, res) => {
     //information we receive from http body 
-
     const errors = validationResult(req);
-
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() })
     } that
@@ -21,7 +19,6 @@ router.post('/validateuser', body('email').isEmail(), (req, res) => {
         email,
         password
     }
-
     return res.status(200).json({ message: 'User was added', userObject: user });
 
 });
