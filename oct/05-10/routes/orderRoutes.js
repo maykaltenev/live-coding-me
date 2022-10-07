@@ -1,4 +1,4 @@
-import express, { response } from "express";
+import express from "express";
 import Order from "../models/oder.js";
 
 const router = express.Router();
@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
     const orders = await Order.find().populate('user');
     return res.status(200).json(orders);
 })
+
 router.get('/byuser/:userid', async (req, res) => {
     const orders = await Order.find({ user: req.params.userid }).populate('user');
     return res.status(200).json(orders);

@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 //GET 
 //http://localhost:3000/api/comments/paging/10/5
 //use skip and limit inside a request.
-router.get('/paging/:skip/:limit', async(req, res) => {
+router.get('/paging/:skip/:limit', async (req, res) => {
     //skip:  before limiting skip this amount of documents => skip this many documents
     //limit: limit the amount of data to this number limit(5) => show us 5 documents
     const comments = await Comment.find().skip(req.params.skip).limit(req.params.limit);
@@ -25,7 +25,7 @@ router.get('/paging/:skip/:limit', async(req, res) => {
 
 //GET
 //http://localhost:3001/api/comments/paging?page=1&pageSize=5
-router.get('/paging', async(req, res) => {
+router.get('/paging', async (req, res) => {
     //page = which page we're on 
     const page = Number(req.query.page) || 1;
     //how many do we want to display 
