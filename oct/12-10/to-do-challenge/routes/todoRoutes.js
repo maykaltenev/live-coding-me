@@ -7,32 +7,32 @@ const router = express.Router();
 router.get('/list', async (req, res) => {
     const todos = await Todo.find();
 
-    return res.status(200).json({message:'list of todos', todos})
+    return res.status(200).json({ message: 'list of todos', todos })
 });
 
 //POST: create a todo 
-router.post('/create', async (req, res)=> {
+router.post('/create', async (req, res) => {
     try {
         const createdTodo = await Todo.create({
-            text:req.body.text
+            text: req.body.text
         });
 
-        return res.status(201).json({message:'Todo created', createdTodo})
+        return res.status(201).json({ message: 'Todo created', createdTodo })
     } catch (error) {
-        return res.status(500).json({message:error.message})
+        return res.status(500).json({ message: error.message })
     }
 });
 
 //PATCH: mark a todo as done
-router.patch('/done/:id',async (req, res) => {
+router.patch('/done/:id', async (req, res) => {
     try {
-        const updatedTodo = await Todo.findByIdAndUpdate(req.params.id,{
-            done:true
-        },{new:true})
+        const updatedTodo = await Todo.findByIdAndUpdate(req.params.id, {
+            done: true
+        }, { new: true })
 
-        return res.status(200).json({message:'Todo marked done', updatedTodo});
+        return res.status(200).json({ message: 'Todo marked done', updatedTodo });
     } catch (error) {
-        return res.status(500).json({message:error.message})
+        return res.status(500).json({ message: error.message })
     }
 })
 

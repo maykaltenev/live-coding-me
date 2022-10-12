@@ -25,9 +25,9 @@ mongoose
     console.log("🤨");
   });
 
-app.use('/api/todo',todoRoutes);
+app.use('/api/todo', todoRoutes);
 
 //deployment reasons
 app.listen(PORT, (req, res) => {
-    console.log(`The server is listening for requests on port ${PORT}`);
+  console.log(`The server is listening for requests on port ${PORT}`);
 });
