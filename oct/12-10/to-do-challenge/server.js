@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cors from 'cors';
+
 import todoRoutes from './routes/todoRoutes.js';
 
 dotenv.config();
@@ -12,7 +13,6 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-
 
 //connecting to the database
 mongoose
@@ -25,9 +25,9 @@ mongoose
     console.log("🤨");
   });
 
-app.use('/api/todo', todoRoutes);
+app.use('/api/todo',todoRoutes);
 
 //deployment reasons
 app.listen(PORT, (req, res) => {
-  console.log(`The server is listening for requests on port ${PORT}`);
+    console.log(`The server is listening for requests on port ${PORT}`);
 });
