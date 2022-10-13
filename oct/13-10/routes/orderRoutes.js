@@ -1,11 +1,16 @@
 import express from 'express';
 import Order from '../models/order.js';
+import passport from 'passport'
+
 
 const router = express.Router();
+
+router.use(passport.authenticate("jwt",{session:false}));
 
 //GET::list of all orders
 //http://localhost:3000/api/users/
 router.get('/', async(req, res) => {
+    console.log("The user that made this request is:", req.user);
     const orders = await Order.find().populate('user');
 
     return res.status(200).json(orders);
@@ -15,6 +20,16 @@ router.get('/', async(req, res) => {
 //http://localhost:3000/api/orders/byuser/633d47d1628fa92dfc021122 (! example user id)
 router.get('/byuser/:userid', async(req, res) => {
     const orders = await Order.find({user:req.params.userid}).populate('user');
+
+    return res.status(200).json(orders);
+});
+
+//GET::list of all orders by user id
+//http://localhost:3000/api/orders/byuser/633d47d1628fa92dfc021122 (! example user id)
+router.get('/myorders', async(req, res) => {
+    console.log("the user is ", req.user)
+    //req.user gives us access to the user who requested this endpoint
+    const orders = await Order.find({user:req.user._id}).populate('user');
 
     return res.status(200).json(orders);
 });

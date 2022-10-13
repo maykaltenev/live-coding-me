@@ -8,6 +8,7 @@ const router = express.Router();
 //http://localhost/api/teas
 router.get("/", async (req, res) => {
   const teas = await Tea.find();
+
   return res.status(200).json(teas);
 });
 

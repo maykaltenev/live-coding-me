@@ -1,11 +1,13 @@
 import express from 'express';
+import { getAllUsers, login, registerUser } from '../controllers/userController.js';
 
-import { getAllUsers, registerUser, login } from '../controllers/userController.js'
 const router = express.Router();
 
 //GET::
 //http://localhost:3000/api/users/
 router.get('/', getAllUsers)
+
+router.post('/login', login)
 
 //POST::
 //http://localhost:3000/api/users/create
@@ -17,5 +19,6 @@ router.get('/', getAllUsers)
 // 	"email":"brandon.test@test.com"
 // }
 router.post('/create', registerUser);
-router.post('/login', login)
+
+
 export default router;
