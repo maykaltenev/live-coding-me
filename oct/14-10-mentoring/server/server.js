@@ -20,7 +20,8 @@ app.use(express.json())
 //     res.send('hi')
 // })
 
-app.use('/posts', require('./routes/postsRoutes'))
+app.use('/posts', require('./routes/postRoutes'))
+app.use('/users', require('./routes/userRoutes'))
 
 const port = process.env.PORT || 8000
 

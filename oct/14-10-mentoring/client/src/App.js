@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function App() {
 
@@ -14,10 +14,10 @@ function App() {
 
     console.log("🚀 ~ handleSave ~ button clicked")
 
-    const response = await axios.post('/posts/add', {message, user: 'E11'})
+    const response = await axios.post('/posts/add', { message, user: 'E11' })
     console.log("🚀 ~ handleSave ~ response", response)
 
-    
+
   }
 
   const menu = [
@@ -28,14 +28,13 @@ function App() {
 
   return (
     <div className="App">
-
       {
         menu
       }
-      
-     <textarea value={message} onChange={e => setMessage(e.target.value)}/>
 
-     <button onClick={handleSave}>Save</button>
+      <textarea value={message} onChange={e => setMessage(e.target.value)} />
+
+      <button onClick={handleSave}>Save</button>
     </div>
   );
 }

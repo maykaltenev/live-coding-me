@@ -64,7 +64,6 @@ router.get("/byname/multiple/:name", async (req, res) => {
 router.post("/create", async (req, res) => {
   function sanitiseCategory(string) {
     const firstChar = string[0].toUpperCase();
-
     return firstChar + string.slice(1);
   }
 
